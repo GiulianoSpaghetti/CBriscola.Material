@@ -53,8 +53,16 @@ public partial class HomePage : UserControl
     {
         if (!Carta.Inizializza(App.path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola"))
         {
-            MainView.MakeNotification($"{MainWindow.d["MazzoNonTrovatoTesto"]}");
-
+            try
+            {
+                MainView.MakeNotification($"{MainWindow.d["MazzoNonTrovatoTesto"]}");
+            }
+            catch (InvalidOperationException ex)
+            {
+                m.SetNome("Napoletano");
+                Carta.Inizializza(App.path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola");
+            }
+     
         }
         if (Instance.o.nomeMazzo == "Napoletano")
         {
@@ -489,6 +497,7 @@ public partial class HomePage : UserControl
 )
             {
                 s1=$"{MainWindow.d["MazzoNonTrovatoTesto"]}\r\n";
+                Instance.o.nomeMazzo=m.GetNome();
  
             }
             Instance.Utente0.Source = g.GetImmagine(0);
