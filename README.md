@@ -12,6 +12,8 @@ Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato fu
 Quello che avete davanti non è il gioco della briscola come si intende oggi, perché oggi tutti i simulatori di briscola dicono "hai preso l'asso, bravo" e finisce lì. Quello che avete davanti è un simulatore equo e professionale, con punteggio aggiornato in tempo reale, in modo da poter decidere se "rischiare" o meno coscientemente, scritto in avalonia col dialetto material.
 Dal momento che avalonia ha i timer che vengono blacklistati, c'è il pulsante per continuare a giocare.
 
+E' in avalonia, ma col dialetto material di google, ma senza usare il foglio di stile di google, ma usando la reactive ui (si legge multithreaded)
+
 # Come installare
 
 ## Su Windows
@@ -59,11 +61,22 @@ Infine compilare.
 
 ## Dove recuperare i mazzi aggiuntivi
 
-I mazzi aggiuntivi sono quelli della wxbriscola, si possono scaricare sulle relative home page dei progetti, per windows e linux.
+I mazzi aggiuntivi sono quelli della wxbriscola, si possono scaricare sulle relative home page dei progetti, per windows e linux e per GNU/Limux dal mio repository.
 
 ## Bug noti
 
 Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazzo napoletano e l'avviso non è garantito che esca.
+
+
+
+## Screenshot
+
+## Su debian
+
+![Schermata del 2025-01-25 18-24-13](https://github.com/user-attachments/assets/c8023243-8986-406e-95d9-a77626095277)
+![Schermata del 2025-01-25 18-24-22](https://github.com/user-attachments/assets/be187f6a-9479-4af2-b17b-39df3b27c9ce)
+![Schermata del 2025-01-25 18-24-29](https://github.com/user-attachments/assets/ed19d824-3a6a-44e9-afce-30f5b68ce085)
+![Schermata del 2025-01-25 18-24-36](https://github.com/user-attachments/assets/a9445ffc-cfed-4938-9ff1-e161f1ec3468)
 
 
 ## Donazione
