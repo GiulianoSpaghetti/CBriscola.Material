@@ -6,7 +6,7 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f46eb9" Name="CBriscola.Avalonia" Language="1033" Version="0.9.5.4" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f48eb4" Name="CBriscola.Avalonia" Language="1033" Version="0.9.6" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" Description="Simulatore del gioco della briscola in avalonia col dialetto Material di Google a due giocatori senza multiplayer" />
     <Media Id="1" Cabinet="CBriscola.Avalonia.cab" EmbedCab="yes" />
 

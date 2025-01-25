@@ -477,6 +477,7 @@ public partial class HomePage : UserControl
     public static void GestisciOpzioni(out string s)
     {
         s = "";
+        string s1 = "";
         g.SetNome(Instance.o.NomeUtente);
         cpu.SetNome(Instance.o.NomeCpu);
         Instance.NomeUtente.Content = g.GetNome();
@@ -487,7 +488,7 @@ public partial class HomePage : UserControl
             if (!Carta.CaricaImmagini(App.path, m, 40, MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola")
 )
             {
-                MainView.MakeNotification($"{MainWindow.d["MazzoNonTrovatoTesto"]}");
+                s1=$"{MainWindow.d["MazzoNonTrovatoTesto"]}\r\n";
  
             }
             Instance.Utente0.Source = g.GetImmagine(0);
@@ -532,7 +533,7 @@ public partial class HomePage : UserControl
         {
             Instance.NuovaPartita(Instance.o.stessoSeme, out s);
         }
-
+        s = s1 + s;
     }
 
 }
