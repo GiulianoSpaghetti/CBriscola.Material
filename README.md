@@ -24,6 +24,10 @@ Prerequisiti:
 
 https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.9
 
+Note: i package sono system indpedent ed IL, per cui in teoria è sufficiente reinstallare il pacchetto ad ogni aggiornamento del desktop runtime ed avviare il programma una volta per ottenere il codice binario aggiornato.
+Ovviamente se aggiornano avalonia bisogna ricompilare.
+
+
 ## Su GNU/linux
 Seguite le istruzioni su http://numeronesoft.ddns.net:8080
 
@@ -34,6 +38,10 @@ Poi installate cbriscola.avalonia
 Prerequisiti:
 
 https://learn.microsoft.com/en-us/linux/packages
+
+Note: i package sono system indpedent ed IL, per cui in teoria è sufficiente reinstallare il pacchetto ad ogni aggiornamento del desktop runtime ed avviare il programma una volta per ottenere il codice binario aggiornato.
+Ovviamente se aggiornano avalonia bisogna ricompilare.
+
 
 ATTENZIONE:
 
