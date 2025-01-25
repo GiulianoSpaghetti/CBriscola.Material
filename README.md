@@ -20,12 +20,20 @@ E' in avalonia, ma col dialetto material di google, ma senza usare il foglio di 
 
 [![winget](https://user-images.githubusercontent.com/49786146/159123313-3bdafdd3-5130-4b0d-9003-40618390943a.png)](https://marticliment.com/wingetui/share?pid=GiulioSorrentino.CBriscola.Avalonia&pname=CBriscola.Avalonia&psource=Winget:%20winget)
 
+Prerequisiti:
+
+https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.9
+
 ## Su GNU/linux
 Seguite le istruzioni su http://numeronesoft.ddns.net:8080
 
 NOTA BENE: la connessione a numeronesoft.ddns.net non e https
 
 Poi installate cbriscola.avalonia
+
+Prerequisiti:
+
+https://learn.microsoft.com/en-us/linux/packages
 
 ATTENZIONE:
 
