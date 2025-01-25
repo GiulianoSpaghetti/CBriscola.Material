@@ -1,1 +1,71 @@
 # CBriscola
+
+:it: Made in Italy. Il primo prodotto serio pubblicato in avalonia col dialetto material ma senza il foglio di stile di google ed internazionalizzato.
+
+Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato funziona su tutti i giochi di carte senza piatto.
+
+![Napoli-Logo](https://github.com/user-attachments/assets/8163c808-62d3-40d3-bce3-0957e57bc26a)
+![made in parco grifeo](https://github.com/user-attachments/assets/fadbf046-aeae-4f11-bda4-eb332c701d56)
+
+
+## CBriscola.Material
+Quello che avete davanti non è il gioco della briscola come si intende oggi, perché oggi tutti i simulatori di briscola dicono "hai preso l'asso, bravo" e finisce lì. Quello che avete davanti è un simulatore equo e professionale, con punteggio aggiornato in tempo reale, in modo da poter decidere se "rischiare" o meno coscientemente, scritto in avalonia col dialetto material.
+Dal momento che avalonia ha i timer che vengono blacklistati, c'è il pulsante per continuare a giocare.
+
+# Come installare
+
+## Su Windows
+
+[![winget](https://user-images.githubusercontent.com/49786146/159123313-3bdafdd3-5130-4b0d-9003-40618390943a.png)](https://marticliment.com/wingetui/share?pid=GiulioSorrentino.CBriscola.Avalonia&pname=CBriscola.Avalonia&psource=Winget:%20winget)
+
+## Su GNU/linux
+Seguite le istruzioni su http://numeronesoft.ddns.net:8080
+
+NOTA BENE: la connessione a numeronesoft.ddns.net non e https
+
+Poi installate cbriscola.avalonia
+
+ATTENZIONE:
+
+Avalonia si basa su due librerie native libharfbuzzsharp e libskiasharp che non sono libere, quindi avalonia non è libero.
+
+## Per compilare
+
+Bisogna scaricarsi da nuget il package CardFramework.avalonia
+
+## Come funziona
+Per festeggiare, vi spiego come funziona il mio algoritmo brevettato:
+i punti in totale sono 120, ossia 4 assi che valgono 11 punti ciascuno, 4 3 che valgono 10 punti ciascuno, 4 10 che valgono 4 punti ciascuno, 4 9 che valgono 3 punti ciascuno, 4 8 che valgono 2 punti ciascuno.
+Dal momento che la matematica non è una opinione:
+4x11+4x10=84.
+4x4+4x3+4x2=16+12+8=36
+
+84+36=120 punti totali
+
+120/2 = 60, servono 61 punti per vincere
+
+basandosi solo sui carichi si rischia di perdere, perché
+
+84-61=23, bisogna prenderli quasi tutti e lasciare solo 23 punti di carichi
+
+60-36=24, prendendo tutte le altre carte bastano solo 3 carichi per vincere.
+
+Per cui non metto i livelli, ma vi lascio imparare la teoria delle carte a lungo, da me inventata a 18 anni, con la wxbriscola, che mi ha portato l'amore di Francesca.                                                                                                                                              
+## Internazionalizzazione
+Aprire il file MainWindows.axaml, all'interno del tag MainWindow.Resources ci sono qulli che vengono chiamati dizionari.
+BIsogna copiare un dizioario ed aggiungrlo alla fine dei dizionari, chiamarlo con la denominazione internazionale a due carattri ella lingua (it per italiano, pt per portoghese, es per spagnolo e via dicendo) e bisogna tradurre tutto qullo che è il contenuto del tag x:string, non il parametro.
+
+Infine compilare.
+
+## Dove recuperare i mazzi aggiuntivi
+
+I mazzi aggiuntivi sono quelli della wxbriscola, si possono scaricare sulle relative home page dei progetti, per windows e linux.
+
+## Bug noti
+
+Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazzo napoletano e l'avviso non è garantito che esca.
+
+
+## Donazione
+
+http://numerone.altervista.org/donazioni.php
