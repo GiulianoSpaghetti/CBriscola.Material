@@ -1,0 +1,65 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:pages="clr-namespace:CBriscola.Pages"
+			 x:DataType="pages:HomePage"
+             x:Class="CBriscola.Pages.HomePage">
+	<Grid>
+		<Grid x:Name="Applicazione">
+			<Grid.RowDefinitions>
+		<RowDefinition />
+		<RowDefinition />
+		<RowDefinition />
+		<RowDefinition />
+		<RowDefinition />
+		<RowDefinition />
+	</Grid.RowDefinitions>
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition />
+		<ColumnDefinition />
+		<ColumnDefinition />
+		<ColumnDefinition Width="auto" />
+	</Grid.ColumnDefinitions>
+	<Label x:Name="NomeUtente" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">Nome Utente</Label>
+	<Button x:Name="Btn0" Grid.Row="1" Grid.Column="0" Click="Image_Tapped">
+		<Image x:Name="Utente0"/>
+	</Button>
+	<Button x:Name="Btn1" Grid.Row="1" Grid.Column="1" Click="Image_Tapped">
+		<Image x:Name="Utente1"/>
+	</Button>
+	<Button x:Name="Btn2" Grid.Row="1" Grid.Column="2" Click="Image_Tapped">
+		<Image x:Name="Utente2"/>
+	</Button>
+	<Image x:Name="Giocata0" Grid.Row="2" Grid.Column="0" />
+	<Image x:Name="Giocata1" Grid.Row="2" Grid.Column="1" />
+	<Image x:Name="Cpu0" Grid.Row="3" Grid.Column="0" />
+	<Image x:Name="Cpu1" Grid.Row="3" Grid.Column="1" />
+	<Image x:Name="Cpu2" Grid.Row="3" Grid.Column="2" />
+	<Label x:Name="NomeCpu" Grid.Row="4" Grid.Column="0" Grid.RowSpan="3">Nome Cpu</Label>
+	<Label x:Name="PuntiUtente" Grid.Row="0" Grid.Column="4">Punti dell'utente</Label>
+	<Label x:Name="PuntiCpu" Grid.Row="1" Grid.Column="4">Punti della Cpu</Label>
+	<Label x:Name="NelMazzoRimangono" Grid.Row="2" Grid.Column="4">Nel Mazzo Rimangono</Label>
+	<Label x:Name="CartaBriscola" Grid.Row="3" Grid.Column="4">Il seme di briscola è</Label>
+	<Image x:Name="Briscola" Grid.Row="4" Grid.Column="4" />
+	<Button x:Name="btnGiocata" Grid.Row="5" Grid.Column="2" IsVisible="false" Click="Gioca_Click" />
+	</Grid>
+	<Grid x:Name="FinePartita" IsVisible="False">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Label x:Name="fpRisultrato" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+		<Button x:Name="fpOk" Click="OnOkFp_Click" Grid.Row="1" Grid.Column="0">Ok</Button>
+		<Button x:Name="fpCancel" Click="OnCancelFp_Click" Grid.Row="1" Grid.Column="1">Annulla</Button>
+		<Button x:Name="fpShare" Click="OnFPShare_Click" Grid.Row="1" Grid.Column="2">Condividi</Button>
+	</Grid>
+	</Grid>
+
+</UserControl>

@@ -1,0 +1,54 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:CBriscola.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
+             xmlns:dialogHostAvalonia="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+			 xmlns:pages="clr-namespace:CBriscola.Pages"
+             x:Class="CBriscola.Views.MainView"
+            x:DataType="vm:MainViewModel">
+	<dialogHostAvalonia:DialogHost Identifier="MainDialogHost">
+		<controls:SnackbarHost HostName="Root">
+			<controls:NavigationDrawer Name="LeftDrawer" Classes="permanent"
+									   LeftDrawerOpened="{Binding ElementName=NavDrawerSwitch, Path=IsChecked, Mode=TwoWay}">
+				<controls:NavigationDrawer.LeftDrawerContent>
+					<ScrollViewer>
+						<ListBox Classes="NoScroll" Name="DrawerList"
+								 Focusable="{Binding ElementName=LeftDrawer, Path=LeftDrawerOpened}">
+							<ListBox.Styles>
+								<Style Selector="ListBoxItem">
+									<Setter Property="Height" Value="48" />
+									<Setter Property="Padding" Value="16,0" />
+									<Setter Property="VerticalContentAlignment" Value="Center" />
+								</Style>
+							</ListBox.Styles>
+							<ListBoxItem Name="HomeTitle">Home</ListBoxItem>
+							<ListBoxItem Name="OptionsTitle">Options</ListBoxItem>
+							<ListBoxItem Name="InfoTitle">Informations</ListBoxItem>
+						</ListBox>
+					</ScrollViewer>
+				</controls:NavigationDrawer.LeftDrawerContent>
+				<DockPanel LastChildFill="true">
+					<Carousel Name="PageCarousel"
+		  HorizontalAlignment="Stretch">
+						<Carousel.Styles>
+							<Style Selector="Carousel#PageCarousel:not(.no-transitions)">
+								<Setter Property="PageTransition">
+									<PageSlide Duration="0.25" SlideOutEasing="CircularEaseOut"
+											   SlideInEasing="CircularEaseOut" />
+								</Setter>
+							</Style>
+						</Carousel.Styles>
+						<pages:HomePage />
+						<pages:OpzioniPage />
+						<pages:InfoPage />
+					</Carousel>
+				</DockPanel>
+			</controls:NavigationDrawer>
+		</controls:SnackbarHost>
+
+	</dialogHostAvalonia:DialogHost>
+</UserControl>
