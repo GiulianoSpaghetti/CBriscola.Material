@@ -23,7 +23,7 @@ namespace cbriscola.avalonia_setup
                         new Dir(@"%ProgramMenu%",
                          new ExeFileShortcut("CBriscola.Avalonia", "[ProgramFiles64Folder]\\CBriscola.Avalonia\\CBriscola.Avalonia.exe", "") { WorkingDirectory = "[INSTALLDIR]" }
                       )//,
-                        //new Property("ALLUSERS","0")
+                       //new Property("ALLUSERS","0")
             );
 
             project.GUID = new Guid("68B61DE0-07A0-499E-B3FB-F15873641EB4");

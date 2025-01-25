@@ -242,8 +242,9 @@ public partial class HomePage : UserControl
     }
     private void OnOkFp_Click(object sender, RoutedEventArgs evt)
     {
-       FinePartita.IsVisible = false;
-        NuovaPartita(stessoSeme);
+        String s="";
+        FinePartita.IsVisible = false;
+        NuovaPartita(stessoSeme, out s);
         Applicazione.IsVisible = true;
 
 
@@ -352,11 +353,12 @@ public partial class HomePage : UserControl
         img1.IsVisible = false;
         return img1;
     }
-    private void NuovaPartita(bool vecchioStessoSeme)
+    private void NuovaPartita(bool vecchioStessoSeme, out String s)
     {
+        s = "";
         if (o.livello != helper.GetLivello())
         {
-            MainView.MakeNotification($"{MainWindow.d["PartitaRiavviata"]}");
+            s += $"{MainWindow.d["PartitaRiavviata"]}\r\n";
 
             puntiCpu = puntiUtente = 0;
             partite = 0;
@@ -365,11 +367,11 @@ public partial class HomePage : UserControl
         {
             if (vecchioStessoSeme)
             {
-                MainView.MakeNotification($"{MainWindow.d["VarianteBussataTesto"]}");
+                s += $"{MainWindow.d["VarianteBussataTesto"]}\r\n";
             }
             else
             {
-                MainView.MakeNotification($"{MainWindow.d["VarianteNormaleTesto"]}");
+                s+=$"{MainWindow.d["VarianteNormaleTesto"]}\r\n";
 
             }
             puntiCpu = puntiUtente = 0;
@@ -472,8 +474,9 @@ public partial class HomePage : UserControl
         return true;
     }
 
-    public static void GestisciOpzioni()
+    public static void GestisciOpzioni(out string s)
     {
+        s = "";
         g.SetNome(Instance.o.NomeUtente);
         cpu.SetNome(Instance.o.NomeCpu);
         Instance.NomeUtente.Content = g.GetNome();
@@ -527,7 +530,7 @@ public partial class HomePage : UserControl
         Instance.SalvaOpzioni(Instance.o);
         if (Instance.o.livello != helper.GetLivello() || stessoSeme != Instance.o.stessoSeme)
         {
-            Instance.NuovaPartita(Instance.o.stessoSeme);
+            Instance.NuovaPartita(Instance.o.stessoSeme, out s);
         }
 
     }

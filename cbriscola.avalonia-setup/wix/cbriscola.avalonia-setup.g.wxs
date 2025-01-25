@@ -6,8 +6,8 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f46eb9" Name="CBriscola.Avalonia" Language="1033" Version="0.9.5.4" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
-    <SummaryInformation Codepage="Windows-1252" Description="Simulatore del gioco della briscola in avalonia a due giocatori senza multiplayer" />
+  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f48eb4" Name="CBriscola.Avalonia" Language="1033" Version="0.9.6" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
+    <SummaryInformation Codepage="Windows-1252" Description="Simulatore del gioco della briscola in avalonia col dialetto Material di Google a due giocatori senza multiplayer" />
     <Media Id="1" Cabinet="CBriscola.Avalonia_.cab" EmbedCab="yes" />
 
     <StandardDirectory Id="ProgramFiles64Folder">
@@ -15,14 +15,6 @@
 
         <Component Id="Component.Avalonia.Base.dll_2217997137" Guid="68b61de0-07a0-499e-b3fb-f158928f379c" Bitness="always64">
           <File Id="Avalonia.Base.dll_2217997137" Source="Avalonia.Base.dll" />
-        </Component>
-
-        <Component Id="Component.Avalonia.Controls.ColorPicker.dll_1050786028" Guid="68b61de0-07a0-499e-b3fb-f1588411a3ba" Bitness="always64">
-          <File Id="Avalonia.Controls.ColorPicker.dll_1050786028" Source="Avalonia.Controls.ColorPicker.dll" />
-        </Component>
-
-        <Component Id="Component.Avalonia.Controls.DataGrid.dll_289138711" Guid="68b61de0-07a0-499e-b3fb-f158cb9bb4a7" Bitness="always64">
-          <File Id="Avalonia.Controls.DataGrid.dll_289138711" Source="Avalonia.Controls.DataGrid.dll" />
         </Component>
 
         <Component Id="Component.Avalonia.Controls.dll_2783528202" Guid="68b61de0-07a0-499e-b3fb-f1586138b6b2" Bitness="always64">
@@ -77,6 +69,10 @@
           <File Id="Avalonia.OpenGL.dll_4096057266" Source="Avalonia.OpenGL.dll" />
         </Component>
 
+        <Component Id="Component.Avalonia.ReactiveUI.dll_144013117" Guid="68b61de0-07a0-499e-b3fb-f1583a8b5008" Bitness="always64">
+          <File Id="Avalonia.ReactiveUI.dll_144013117" Source="Avalonia.ReactiveUI.dll" />
+        </Component>
+
         <Component Id="Component.Avalonia.Remote.Protocol.dll_856865421" Guid="68b61de0-07a0-499e-b3fb-f158eb84fa1c" Bitness="always64">
           <File Id="Avalonia.Remote.Protocol.dll_856865421" Source="Avalonia.Remote.Protocol.dll" />
         </Component>
@@ -87,10 +83,6 @@
 
         <Component Id="Component.Avalonia.Themes.Fluent.dll_2845796681" Guid="68b61de0-07a0-499e-b3fb-f1584e6d42bc" Bitness="always64">
           <File Id="Avalonia.Themes.Fluent.dll_2845796681" Source="Avalonia.Themes.Fluent.dll" />
-        </Component>
-
-        <Component Id="Component.Avalonia.Themes.Simple.dll_1474049084" Guid="68b61de0-07a0-499e-b3fb-f15820dddfe9" Bitness="always64">
-          <File Id="Avalonia.Themes.Simple.dll_1474049084" Source="Avalonia.Themes.Simple.dll" />
         </Component>
 
         <Component Id="Component.Avalonia.Vulkan.dll_1756901464" Guid="68b61de0-07a0-499e-b3fb-f1584f54d268" Bitness="always64">
@@ -109,40 +101,40 @@
           <File Id="CardFramework.avalonia.dll_1785405297" Source="CardFramework.avalonia.dll" />
         </Component>
 
-        <Component Id="Component.CBriscola.Avalonia.deps.json_537071405" Guid="68b61de0-07a0-499e-b3fb-f158ed30d030" Bitness="always64">
-          <File Id="CBriscola.Avalonia.deps.json_537071405" Source="CBriscola.Avalonia.deps.json" />
+        <Component Id="Component.CBriscola.Desktop.deps.json_3846200679" Guid="68b61de0-07a0-499e-b3fb-f15841e36478" Bitness="always64">
+          <File Id="CBriscola.Desktop.deps.json_3846200679" Source="CBriscola.Desktop.deps.json" />
         </Component>
 
-        <Component Id="Component.CBriscola.Avalonia.dll_2768373598" Guid="68b61de0-07a0-499e-b3fb-f158fda53705" Bitness="always64">
-          <File Id="CBriscola.Avalonia.dll_2768373598" Source="CBriscola.Avalonia.dll" />
+        <Component Id="Component.CBriscola.Desktop.dll_4028050013" Guid="68b61de0-07a0-499e-b3fb-f158a8889589" Bitness="always64">
+          <File Id="CBriscola.Desktop.dll_4028050013" Source="CBriscola.Desktop.dll" />
         </Component>
 
-        <Component Id="Component.CBriscola.Avalonia.exe_895914010" Guid="68b61de0-07a0-499e-b3fb-f158c01b09a4" Bitness="always64">
-          <File Id="CBriscola.Avalonia.exe_895914010" Source="CBriscola.Avalonia.exe" />
+        <Component Id="Component.CBriscola.Desktop.exe_2104424993" Guid="68b61de0-07a0-499e-b3fb-f158c9cabba4" Bitness="always64">
+          <File Id="CBriscola.Desktop.exe_2104424993" Source="CBriscola.Desktop.exe" />
         </Component>
 
-        <Component Id="Component.CBriscola.Avalonia.pdb_2743053366" Guid="68b61de0-07a0-499e-b3fb-f15842c4a605" Bitness="always64">
-          <File Id="CBriscola.Avalonia.pdb_2743053366" Source="CBriscola.Avalonia.pdb" />
+        <Component Id="Component.CBriscola.Desktop.pdb_182897143" Guid="68b61de0-07a0-499e-b3fb-f158ca2344ca" Bitness="always64">
+          <File Id="CBriscola.Desktop.pdb_182897143" Source="CBriscola.Desktop.pdb" />
         </Component>
 
-        <Component Id="Component.CBriscola.Avalonia.runtimeconfig.json_1534242433" Guid="68b61de0-07a0-499e-b3fb-f1587bb26222" Bitness="always64">
-          <File Id="CBriscola.Avalonia.runtimeconfig.json_1534242433" Source="CBriscola.Avalonia.runtimeconfig.json" />
+        <Component Id="Component.CBriscola.Desktop.runtimeconfig.json_1798129468" Guid="68b61de0-07a0-499e-b3fb-f15803605ed9" Bitness="always64">
+          <File Id="CBriscola.Desktop.runtimeconfig.json_1798129468" Source="CBriscola.Desktop.runtimeconfig.json" />
         </Component>
 
-        <Component Id="Component.DesktopNotifications.Apple.dll_2771040437" Guid="68b61de0-07a0-499e-b3fb-f15861da9eb9" Bitness="always64">
-          <File Id="DesktopNotifications.Apple.dll_2771040437" Source="DesktopNotifications.Apple.dll" />
+        <Component Id="Component.CBriscola.dll_400818490" Guid="68b61de0-07a0-499e-b3fb-f158b3235a3e" Bitness="always64">
+          <File Id="CBriscola.dll_400818490" Source="CBriscola.dll" />
         </Component>
 
-        <Component Id="Component.DesktopNotifications.dll_2984958193" Guid="68b61de0-07a0-499e-b3fb-f15846fa838a" Bitness="always64">
-          <File Id="DesktopNotifications.dll_2984958193" Source="DesktopNotifications.dll" />
+        <Component Id="Component.CBriscola.pdb_1207911812" Guid="68b61de0-07a0-499e-b3fb-f15898b39d3d" Bitness="always64">
+          <File Id="CBriscola.pdb_1207911812" Source="CBriscola.pdb" />
         </Component>
 
-        <Component Id="Component.DesktopNotifications.FreeDesktop.dll_148094181" Guid="68b61de0-07a0-499e-b3fb-f158766c8995" Bitness="always64">
-          <File Id="DesktopNotifications.FreeDesktop.dll_148094181" Source="DesktopNotifications.FreeDesktop.dll" />
+        <Component Id="Component.DialogHost.Avalonia.dll_2026914265" Guid="68b61de0-07a0-499e-b3fb-f158d01f7c0c" Bitness="always64">
+          <File Id="DialogHost.Avalonia.dll_2026914265" Source="DialogHost.Avalonia.dll" />
         </Component>
 
-        <Component Id="Component.DesktopNotifications.Windows.dll_3782025601" Guid="68b61de0-07a0-499e-b3fb-f1587a3cc278" Bitness="always64">
-          <File Id="DesktopNotifications.Windows.dll_3782025601" Source="DesktopNotifications.Windows.dll" />
+        <Component Id="Component.DynamicData.dll_574106552" Guid="68b61de0-07a0-499e-b3fb-f158cddccd89" Bitness="always64">
+          <File Id="DynamicData.dll_574106552" Source="DynamicData.dll" />
         </Component>
 
         <Component Id="Component.HarfBuzzSharp.dll_2004400215" Guid="68b61de0-07a0-499e-b3fb-f158865c343a" Bitness="always64">
@@ -173,14 +165,6 @@
           <File Id="MicroCom.Runtime.dll_2518430395" Source="MicroCom.Runtime.dll" />
         </Component>
 
-        <Component Id="Component.Microsoft.Toolkit.Uwp.Notifications.dll_1570568085" Guid="68b61de0-07a0-499e-b3fb-f1589cc63fc7" Bitness="always64">
-          <File Id="Microsoft.Toolkit.Uwp.Notifications.dll_1570568085" Source="Microsoft.Toolkit.Uwp.Notifications.dll" />
-        </Component>
-
-        <Component Id="Component.Microsoft.Win32.SystemEvents.dll_3099293477" Guid="68b61de0-07a0-499e-b3fb-f158ea8822a7" Bitness="always64">
-          <File Id="Microsoft.Win32.SystemEvents.dll_3099293477" Source="Microsoft.Win32.SystemEvents.dll" />
-        </Component>
-
         <Component Id="Component.Microsoft.Windows.SDK.NET.dll_3444947718" Guid="68b61de0-07a0-499e-b3fb-f15817490b0f" Bitness="always64">
           <File Id="Microsoft.Windows.SDK.NET.dll_3444947718" Source="Microsoft.Windows.SDK.NET.dll" />
         </Component>
@@ -189,20 +173,20 @@
           <File Id="Newtonsoft.Json.dll_3252048380" Source="Newtonsoft.Json.dll" />
         </Component>
 
+        <Component Id="Component.ReactiveUI.dll_4244492026" Guid="68b61de0-07a0-499e-b3fb-f15864973fd0" Bitness="always64">
+          <File Id="ReactiveUI.dll_4244492026" Source="ReactiveUI.dll" />
+        </Component>
+
         <Component Id="Component.SkiaSharp.dll_51033951" Guid="68b61de0-07a0-499e-b3fb-f158f29626af" Bitness="always64">
           <File Id="SkiaSharp.dll_51033951" Source="SkiaSharp.dll" />
         </Component>
 
-        <Component Id="Component.System.Drawing.Common.dll_742764949" Guid="68b61de0-07a0-499e-b3fb-f158ef3aa9fa" Bitness="always64">
-          <File Id="System.Drawing.Common.dll_742764949" Source="System.Drawing.Common.dll" />
+        <Component Id="Component.Splat.dll_915239748" Guid="68b61de0-07a0-499e-b3fb-f1582488691f" Bitness="always64">
+          <File Id="Splat.dll_915239748" Source="Splat.dll" />
         </Component>
 
-        <Component Id="Component.System.Private.Windows.Core.dll_607167120" Guid="68b61de0-07a0-499e-b3fb-f158f76e30b8" Bitness="always64">
-          <File Id="System.Private.Windows.Core.dll_607167120" Source="System.Private.Windows.Core.dll" />
-        </Component>
-
-        <Component Id="Component.Tmds.DBus.dll_3291142791" Guid="68b61de0-07a0-499e-b3fb-f158c53d1fbd" Bitness="always64">
-          <File Id="Tmds.DBus.dll_3291142791" Source="Tmds.DBus.dll" />
+        <Component Id="Component.System.Reactive.dll_3227492702" Guid="68b61de0-07a0-499e-b3fb-f158c8a83699" Bitness="always64">
+          <File Id="System.Reactive.dll_3227492702" Source="System.Reactive.dll" />
         </Component>
 
         <Component Id="Component.Tmds.DBus.Protocol.dll_3651087285" Guid="68b61de0-07a0-499e-b3fb-f15853dfd8eb" Bitness="always64">
@@ -214,19 +198,19 @@
         </Component>
 
         <Directory Id="runtimes" Name="runtimes">
-          <Directory Id="win2dx64_" Name="win-x64">
+          <Directory Id="win2darm64_" Name="win-arm64">
             <Directory Id="native" Name="native">
 
-              <Component Id="Component.av_libglesv2.dll_1791258303" Guid="68b61de0-07a0-499e-b3fb-f15853df9b4b" Bitness="always64">
-                <File Id="av_libglesv2.dll_1791258303" Source="runtimes\win-x64\native\av_libglesv2.dll" />
+              <Component Id="Component.av_libglesv2.dll_1215271553" Guid="68b61de0-07a0-499e-b3fb-f158e0fe4812" Bitness="always64">
+                <File Id="av_libglesv2.dll_1215271553" Source="runtimes\win-arm64\native\av_libglesv2.dll" />
               </Component>
 
-              <Component Id="Component.libHarfBuzzSharp.dll_1561235758" Guid="68b61de0-07a0-499e-b3fb-f158a2c34aa5" Bitness="always64">
-                <File Id="libHarfBuzzSharp.dll_1561235758" Source="runtimes\win-x64\native\libHarfBuzzSharp.dll" />
+              <Component Id="Component.libHarfBuzzSharp.dll_3856743102" Guid="68b61de0-07a0-499e-b3fb-f1585f099bea" Bitness="always64">
+                <File Id="libHarfBuzzSharp.dll_3856743102" Source="runtimes\win-arm64\native\libHarfBuzzSharp.dll" />
               </Component>
 
-              <Component Id="Component.libSkiaSharp.dll_3753603893" Guid="68b61de0-07a0-499e-b3fb-f158b4a9340a" Bitness="always64">
-                <File Id="libSkiaSharp.dll_3753603893" Source="runtimes\win-x64\native\libSkiaSharp.dll" />
+              <Component Id="Component.libSkiaSharp.dll_663145871" Guid="68b61de0-07a0-499e-b3fb-f15801c79f6d" Bitness="always64">
+                <File Id="libSkiaSharp.dll_663145871" Source="runtimes\win-arm64\native\libSkiaSharp.dll" />
               </Component>
 
             </Directory>
@@ -238,7 +222,7 @@
     <StandardDirectory Id="ProgramMenuFolder">
 
       <Component Id="Component.CBriscola.Avalonia___" Guid="68b61de0-07a0-499e-b3fb-f158dea689b4" Bitness="always64">
-        <Shortcut Id="ProgramMenuFolder.CBriscola.Avalonia___" WorkingDirectory="INSTALLDIR" Target="[ProgramFiles64Folder]\CBriscola.Avalonia\CBriscola.Avalonia.exe" Name="CBriscola.Avalonia.lnk" />
+        <Shortcut Id="ProgramMenuFolder.CBriscola.Avalonia___" WorkingDirectory="INSTALLDIR" Target="[ProgramFiles64Folder]\CBriscola.Avalonia\CBriscola.Desktop.exe" Name="CBriscola.Avalonia.lnk" />
 
         <CreateFolder />
 
@@ -250,16 +234,14 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <WixVariable Id="WixUILicenseRtf" Value="E:\source\CBriscola.Avalonia\CBriscola.Avalonia\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="D:\source\CBriscola.Material\CBriscola.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
 
     <UIRef Id="WixUI_ErrorProgressText" />
 
-    <Property Id="ARPHELPLINK" Value="https://github.com/GiulianoSpaghetti/CBriscola.Avalonia/issues" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/GiulianoSpaghetti/CBriscola.Material/issues" />
 
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
       <ComponentRef Id="Component.Avalonia.Base.dll_2217997137" />
-      <ComponentRef Id="Component.Avalonia.Controls.ColorPicker.dll_1050786028" />
-      <ComponentRef Id="Component.Avalonia.Controls.DataGrid.dll_289138711" />
       <ComponentRef Id="Component.Avalonia.Controls.dll_2783528202" />
       <ComponentRef Id="Component.Avalonia.DesignerSupport.dll_1252264274" />
       <ComponentRef Id="Component.Avalonia.Desktop.dll_3440118340" />
@@ -273,23 +255,23 @@
       <ComponentRef Id="Component.Avalonia.MicroCom.dll_67743269" />
       <ComponentRef Id="Component.Avalonia.Native.dll_2985829442" />
       <ComponentRef Id="Component.Avalonia.OpenGL.dll_4096057266" />
+      <ComponentRef Id="Component.Avalonia.ReactiveUI.dll_144013117" />
       <ComponentRef Id="Component.Avalonia.Remote.Protocol.dll_856865421" />
       <ComponentRef Id="Component.Avalonia.Skia.dll_1262385531" />
       <ComponentRef Id="Component.Avalonia.Themes.Fluent.dll_2845796681" />
-      <ComponentRef Id="Component.Avalonia.Themes.Simple.dll_1474049084" />
       <ComponentRef Id="Component.Avalonia.Vulkan.dll_1756901464" />
       <ComponentRef Id="Component.Avalonia.Win32.dll_2128635293" />
       <ComponentRef Id="Component.Avalonia.X11.dll_3918326533" />
       <ComponentRef Id="Component.CardFramework.avalonia.dll_1785405297" />
-      <ComponentRef Id="Component.CBriscola.Avalonia.deps.json_537071405" />
-      <ComponentRef Id="Component.CBriscola.Avalonia.dll_2768373598" />
-      <ComponentRef Id="Component.CBriscola.Avalonia.exe_895914010" />
-      <ComponentRef Id="Component.CBriscola.Avalonia.pdb_2743053366" />
-      <ComponentRef Id="Component.CBriscola.Avalonia.runtimeconfig.json_1534242433" />
-      <ComponentRef Id="Component.DesktopNotifications.Apple.dll_2771040437" />
-      <ComponentRef Id="Component.DesktopNotifications.dll_2984958193" />
-      <ComponentRef Id="Component.DesktopNotifications.FreeDesktop.dll_148094181" />
-      <ComponentRef Id="Component.DesktopNotifications.Windows.dll_3782025601" />
+      <ComponentRef Id="Component.CBriscola.Desktop.deps.json_3846200679" />
+      <ComponentRef Id="Component.CBriscola.Desktop.dll_4028050013" />
+      <ComponentRef Id="Component.CBriscola.Desktop.exe_2104424993" />
+      <ComponentRef Id="Component.CBriscola.Desktop.pdb_182897143" />
+      <ComponentRef Id="Component.CBriscola.Desktop.runtimeconfig.json_1798129468" />
+      <ComponentRef Id="Component.CBriscola.dll_400818490" />
+      <ComponentRef Id="Component.CBriscola.pdb_1207911812" />
+      <ComponentRef Id="Component.DialogHost.Avalonia.dll_2026914265" />
+      <ComponentRef Id="Component.DynamicData.dll_574106552" />
       <ComponentRef Id="Component.HarfBuzzSharp.dll_2004400215" />
       <ComponentRef Id="Component.LICENSE.rtf_3043046532" />
       <ComponentRef Id="Component.Material.Avalonia.dll_79711849" />
@@ -297,19 +279,17 @@
       <ComponentRef Id="Component.Material.Ripple.dll_704135423" />
       <ComponentRef Id="Component.Material.Styles.dll_747688279" />
       <ComponentRef Id="Component.MicroCom.Runtime.dll_2518430395" />
-      <ComponentRef Id="Component.Microsoft.Toolkit.Uwp.Notifications.dll_1570568085" />
-      <ComponentRef Id="Component.Microsoft.Win32.SystemEvents.dll_3099293477" />
       <ComponentRef Id="Component.Microsoft.Windows.SDK.NET.dll_3444947718" />
       <ComponentRef Id="Component.Newtonsoft.Json.dll_3252048380" />
+      <ComponentRef Id="Component.ReactiveUI.dll_4244492026" />
       <ComponentRef Id="Component.SkiaSharp.dll_51033951" />
-      <ComponentRef Id="Component.System.Drawing.Common.dll_742764949" />
-      <ComponentRef Id="Component.System.Private.Windows.Core.dll_607167120" />
-      <ComponentRef Id="Component.Tmds.DBus.dll_3291142791" />
+      <ComponentRef Id="Component.Splat.dll_915239748" />
+      <ComponentRef Id="Component.System.Reactive.dll_3227492702" />
       <ComponentRef Id="Component.Tmds.DBus.Protocol.dll_3651087285" />
       <ComponentRef Id="Component.WinRT.Runtime.dll_2702495410" />
-      <ComponentRef Id="Component.av_libglesv2.dll_1791258303" />
-      <ComponentRef Id="Component.libHarfBuzzSharp.dll_1561235758" />
-      <ComponentRef Id="Component.libSkiaSharp.dll_3753603893" />
+      <ComponentRef Id="Component.av_libglesv2.dll_1215271553" />
+      <ComponentRef Id="Component.libHarfBuzzSharp.dll_3856743102" />
+      <ComponentRef Id="Component.libSkiaSharp.dll_663145871" />
       <ComponentRef Id="Component.CBriscola.Avalonia___" />
     </Feature>
   </Package>

@@ -77,6 +77,7 @@ public partial class OpzioniPage : UserControl
     }
     public void OnOk_Click(Object source, RoutedEventArgs evt)
     {
+        String s;
         HomePage.Instance.o.NomeUtente = txtNomeUtente.Text;
         HomePage.Instance.o.NomeCpu = txtCpu.Text;
 
@@ -96,7 +97,7 @@ public partial class OpzioniPage : UserControl
         if (i != null)
             HomePage.Instance.o.nomeMazzo=(string)i.Content;
         HomePage.Instance.o.livello = (UInt16) (cbLivello.SelectedIndex + 1);
-        HomePage.GestisciOpzioni();
-        MainView.MakeNotification(MainWindow.d["RitornaallaHome"] as string);
+        HomePage.GestisciOpzioni(out s);
+        MainView.MakeNotification($"{s}{MainWindow.d["RitornaallaHome"]}");
     }
 }
