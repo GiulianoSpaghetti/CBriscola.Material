@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+     <RootNamespace>WixSharp</RootNamespace>
+    <TargetFramework>net472</TargetFramework>
+     <RootNamespace>WixSharp</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="*.msi" />
+    <None Remove="*.exe" />
+    <None Remove="*.wxs" />
+    <None Remove="*.wixpdb" />
+    <None Remove="*.wixobj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixSharp_wix4" Version="2.4.3" />
+    <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="5.0.2" />
+    <PackageReference Include="WixToolset.Mba.Core" Version="4.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wix\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd .\&#xD;&#xA;set ide=true&#xD;&#xA;&quot;$(TargetPath)&quot;" />
+  </Target>
+
+</Project>
