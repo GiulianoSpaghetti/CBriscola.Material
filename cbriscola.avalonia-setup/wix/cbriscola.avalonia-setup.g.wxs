@@ -6,9 +6,9 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f48eb4" Name="CBriscola.Avalonia" Language="1033" Version="0.9.6" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f46eb9" Name="CBriscola.Avalonia" Language="1033" Version="0.9.5.4" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" Description="Simulatore del gioco della briscola in avalonia col dialetto Material di Google a due giocatori senza multiplayer" />
-    <Media Id="1" Cabinet="CBriscola.Avalonia_.cab" EmbedCab="yes" />
+    <Media Id="1" Cabinet="CBriscola.Avalonia.cab" EmbedCab="yes" />
 
     <StandardDirectory Id="ProgramFiles64Folder">
       <Directory Id="INSTALLDIR" Name="CBriscola.Avalonia">
@@ -198,19 +198,19 @@
         </Component>
 
         <Directory Id="runtimes" Name="runtimes">
-          <Directory Id="win2darm64_" Name="win-arm64">
+          <Directory Id="win2dx64_" Name="win-x64">
             <Directory Id="native" Name="native">
 
-              <Component Id="Component.av_libglesv2.dll_1215271553" Guid="68b61de0-07a0-499e-b3fb-f158e0fe4812" Bitness="always64">
-                <File Id="av_libglesv2.dll_1215271553" Source="runtimes\win-arm64\native\av_libglesv2.dll" />
+              <Component Id="Component.av_libglesv2.dll_1791258303" Guid="68b61de0-07a0-499e-b3fb-f15853df9b4b" Bitness="always64">
+                <File Id="av_libglesv2.dll_1791258303" Source="runtimes\win-x64\native\av_libglesv2.dll" />
               </Component>
 
-              <Component Id="Component.libHarfBuzzSharp.dll_3856743102" Guid="68b61de0-07a0-499e-b3fb-f1585f099bea" Bitness="always64">
-                <File Id="libHarfBuzzSharp.dll_3856743102" Source="runtimes\win-arm64\native\libHarfBuzzSharp.dll" />
+              <Component Id="Component.libHarfBuzzSharp.dll_1561235758" Guid="68b61de0-07a0-499e-b3fb-f158a2c34aa5" Bitness="always64">
+                <File Id="libHarfBuzzSharp.dll_1561235758" Source="runtimes\win-x64\native\libHarfBuzzSharp.dll" />
               </Component>
 
-              <Component Id="Component.libSkiaSharp.dll_663145871" Guid="68b61de0-07a0-499e-b3fb-f15801c79f6d" Bitness="always64">
-                <File Id="libSkiaSharp.dll_663145871" Source="runtimes\win-arm64\native\libSkiaSharp.dll" />
+              <Component Id="Component.libSkiaSharp.dll_3753603893" Guid="68b61de0-07a0-499e-b3fb-f158b4a9340a" Bitness="always64">
+                <File Id="libSkiaSharp.dll_3753603893" Source="runtimes\win-x64\native\libSkiaSharp.dll" />
               </Component>
 
             </Directory>
@@ -221,8 +221,8 @@
 
     <StandardDirectory Id="ProgramMenuFolder">
 
-      <Component Id="Component.CBriscola.Avalonia___" Guid="68b61de0-07a0-499e-b3fb-f158dea689b4" Bitness="always64">
-        <Shortcut Id="ProgramMenuFolder.CBriscola.Avalonia___" WorkingDirectory="INSTALLDIR" Target="[ProgramFiles64Folder]\CBriscola.Avalonia\CBriscola.Desktop.exe" Name="CBriscola.Avalonia.lnk" />
+      <Component Id="Component.CBriscola.Avalonia__" Guid="68b61de0-07a0-499e-b3fb-f1580415b7b6" Bitness="always64">
+        <Shortcut Id="ProgramMenuFolder.CBriscola.Avalonia__" WorkingDirectory="INSTALLDIR" Target="[ProgramFiles64Folder]\CBriscola.Avalonia\CBriscola.Desktop.exe" Name="CBriscola.Avalonia.lnk" />
 
         <CreateFolder />
 
@@ -234,7 +234,7 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <WixVariable Id="WixUILicenseRtf" Value="D:\source\CBriscola.Material\CBriscola.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="C:\Users\numer\source\repos\CBriscola\CBriscola.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
 
     <UIRef Id="WixUI_ErrorProgressText" />
 
@@ -287,10 +287,10 @@
       <ComponentRef Id="Component.System.Reactive.dll_3227492702" />
       <ComponentRef Id="Component.Tmds.DBus.Protocol.dll_3651087285" />
       <ComponentRef Id="Component.WinRT.Runtime.dll_2702495410" />
-      <ComponentRef Id="Component.av_libglesv2.dll_1215271553" />
-      <ComponentRef Id="Component.libHarfBuzzSharp.dll_3856743102" />
-      <ComponentRef Id="Component.libSkiaSharp.dll_663145871" />
-      <ComponentRef Id="Component.CBriscola.Avalonia___" />
+      <ComponentRef Id="Component.av_libglesv2.dll_1791258303" />
+      <ComponentRef Id="Component.libHarfBuzzSharp.dll_1561235758" />
+      <ComponentRef Id="Component.libSkiaSharp.dll_3753603893" />
+      <ComponentRef Id="Component.CBriscola.Avalonia__" />
     </Feature>
   </Package>
 </Wix>

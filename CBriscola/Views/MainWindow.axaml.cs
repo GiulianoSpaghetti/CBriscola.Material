@@ -19,5 +19,6 @@ public partial class MainWindow : Window
         MainView.Traduci();
         HomePage.Traduci();
         OpzioniPage.Traduci();
+        WindowState = WindowState.Maximized;
     }
 }
