@@ -100,6 +100,12 @@ Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazz
 <img width="1920" alt="2025-01-25 (7)" src="https://github.com/user-attachments/assets/00424793-b22d-43ac-8955-c68ae501c862" />
 <img width="1920" alt="2025-01-25 (6)" src="https://github.com/user-attachments/assets/f4b77c31-b324-4e59-b310-1c68854d36aa" />
 
+## Bug noti
+
+In questa versione i mazzi aggiuntivi non vengono riletti ad ogni esecuzione della pagina opzioni, perché è una e viene caricata solo la prima volta. E' necessario chiudere e riaprire il programma una volta installati i mazzi aggiuntivi.
+
+In questa versione non è possibile vedere più di due avvisi nella notifica, a volte ce ne possono essere anche tre.
+
 
 ## Donazione
 
