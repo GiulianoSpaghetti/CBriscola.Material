@@ -5,7 +5,6 @@
      <RootNamespace>WixSharp</RootNamespace>
     <TargetFramework>net472</TargetFramework>
      <RootNamespace>WixSharp</RootNamespace>
-	  <Nullable>disable</Nullable>
   </PropertyGroup>
   
   <ItemGroup>

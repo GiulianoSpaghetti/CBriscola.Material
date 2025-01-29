@@ -29,13 +29,13 @@ namespace cbriscola.avalonia_setup
             project.GUID = new Guid("68B61DE0-07A0-499E-B3FB-F15873641EB4");
             project.Version = new Version("0.9.6");
             project.Platform = Platform.x64;
-            project.SourceBaseDir = "C:\\Users\\numer\\source\\repos\\CBriscola\\CBriscola.Desktop\\bin\\Release\\net9.0-windows10.0.26100.0";
+            project.SourceBaseDir = "C:\\Users\\numer\\source\\repos\\CBriscola.avalonia\\CBriscola.Desktop\\bin\\Release\\net9.0-windows10.0.26100.0";
             project.LicenceFile = "LICENSE.rtf";
             project.OutDir = "E:\\";
             project.ControlPanelInfo.Manufacturer = "Giulio Sorrentino";
             project.ControlPanelInfo.Name = "CBriscola.Material";
-            project.ControlPanelInfo.HelpLink = "https://github.com/GiulianoSpaghetti/CBriscola.Material/issues";
-            project.Description = "Simulatore del gioco della briscola in avalonia col dialetto Material di Google a due giocatori senza multiplayer";
+            project.ControlPanelInfo.HelpLink = "https://github.com/GiulianoSpaghetti/CBriscola.Matal/issues";
+            project.Description = "Simulatore del gioco della briscola in avalonia a due giocatori senza multiplayer";
             //            project.Properties.SetValue("ALLUSERS", 0);
             project.BuildMsi();
         }
