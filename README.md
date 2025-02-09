@@ -113,6 +113,10 @@ Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazz
 <img width="1920" alt="2025-01-25 (7)" src="https://github.com/user-attachments/assets/00424793-b22d-43ac-8955-c68ae501c862" />
 <img width="1920" alt="2025-01-25 (6)" src="https://github.com/user-attachments/assets/f4b77c31-b324-4e59-b310-1c68854d36aa" />
 
+## Video di presentazione
+
+https://www.youtube.com/watch?v=kLVUfnbxpaw
+
 ## Donazione
 
 http://numerone.altervista.org/donazioni.php
