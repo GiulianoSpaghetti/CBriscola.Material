@@ -84,10 +84,11 @@ I mazzi aggiuntivi sono quelli della wxbriscola, si possono scaricare sulle rela
 
 ## Bug noti
 
+In questa versione i mazzi aggiuntivi non vengono riletti ad ogni esecuzione della pagina opzioni, perché è una e viene caricata solo la prima volta. E' necessario chiudere e riaprire il programma una volta installati i mazzi aggiuntivi.
+
+In questa versione non è possibile vedere più di due avvisi nella notifica, a volte ce ne possono essere anche tre.
+
 Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazzo napoletano e l'avviso non è garantito che esca.
-
-In questo progetto le opzioni vengono caricate in una pagina apposita che viene caricata all'avvio del programma, per cui il mazzo aggiuntivo deve essere installato per forza a programma chiuso, se no non esce nella lista.
-
 
 
 ## Screenshot
@@ -104,13 +105,6 @@ In questo progetto le opzioni vengono caricate in una pagina apposita che viene 
 <img width="1920" alt="2025-01-25 (8)" src="https://github.com/user-attachments/assets/fc2644ff-6b18-4675-8179-29075884240e" />
 <img width="1920" alt="2025-01-25 (7)" src="https://github.com/user-attachments/assets/00424793-b22d-43ac-8955-c68ae501c862" />
 <img width="1920" alt="2025-01-25 (6)" src="https://github.com/user-attachments/assets/f4b77c31-b324-4e59-b310-1c68854d36aa" />
-
-## Bug noti
-
-In questa versione i mazzi aggiuntivi non vengono riletti ad ogni esecuzione della pagina opzioni, perché è una e viene caricata solo la prima volta. E' necessario chiudere e riaprire il programma una volta installati i mazzi aggiuntivi.
-
-In questa versione non è possibile vedere più di due avvisi nella notifica, a volte ce ne possono essere anche tre.
-
 
 ## Donazione
 
