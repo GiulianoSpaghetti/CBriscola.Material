@@ -115,7 +115,7 @@ Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazz
 
 ## Video di presentazione
 
-https://www.youtube.com/watch?v=kLVUfnbxpaw
+https://photos.app.goo.gl/Y2K9T1A2BMZSc7bB8
 
 ## Donazione
 
