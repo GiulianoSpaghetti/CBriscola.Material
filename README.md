@@ -86,6 +86,8 @@ I mazzi aggiuntivi sono quelli della wxbriscola, si possono scaricare sulle rela
 
 Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazzo napoletano e l'avviso non è garantito che esca.
 
+In questo progetto le opzioni vengono caricate in una pagina apposita che viene caricata all'avvio del programma, per cui il mazzo aggiuntivo deve essere installato per forza a programma chiuso, se no non esce nella lista.
+
 
 
 ## Screenshot
