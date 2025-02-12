@@ -19,20 +19,17 @@
     <PackageReference Include="HarfBuzzSharp.NativeAssets.macOS" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Win32" Version="8.3.0.1" />
+    <PackageReference Include="Material.Avalonia" Version="3.9.2" />
     <PackageReference Include="ReactiveUI" Version="20.1.63" />
     <PackageReference Include="SkiaSharp" Version="3.116.1" />
     <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />
     <PackageReference Include="SkiaSharp.NativeAssets.WebAssembly" Version="3.116.1" />
-    <PackageReference Include="Splat" Version="15.2.22" />
-    <PackageReference Include="System.IO.Pipelines" Version="9.0.1" />
+    <PackageReference Include="Splat" Version="15.3.1" />
+    <PackageReference Include="System.IO.Pipelines" Version="9.0.2" />
     <PackageReference Include="Tmds.DBus.Protocol" Version="0.21.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CBriscola\CBriscola.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AvaloniaResource Remove="icon.ico" />
   </ItemGroup>
 </Project>

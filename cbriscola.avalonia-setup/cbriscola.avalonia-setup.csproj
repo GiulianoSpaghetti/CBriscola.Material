@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixSharp_wix4" Version="2.4.4" />
+    <PackageReference Include="WixSharp_wix4" Version="2.5.1" />
     <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="5.0.2" />
     <PackageReference Include="WixToolset.Mba.Core" Version="4.0.6" />
   </ItemGroup>
