@@ -7,7 +7,7 @@ namespace cbriscola.avalonia_setup
     {
         static void Main()
         {
-            var project = new Project("CBriscola.Avalonia",
+            Project project = new Project("CBriscola.Avalonia",
                               new Dir(@"[ProgramFiles64Folder]\\CBriscola.Avalonia",
                                   new DirFiles(@"*.*"),
                                   new Dir("runtimes",
