@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia.Angle.Windows.Natives" Version="2.1.22087.20231008" />
     <PackageReference Include="Avalonia.BuildServices" Version="0.0.31" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.2.4" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.5" />
     <PackageReference Include="DynamicData" Version="9.1.2" />
     <PackageReference Include="HarfBuzzSharp" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="8.3.0.1" />

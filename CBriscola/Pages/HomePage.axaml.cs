@@ -4,6 +4,7 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using Avalonia.Platform.Storage;
 using CBriscola.Views;
 using Material.Styles.Controls;
 using Metsys.Bson;
@@ -27,7 +28,7 @@ public partial class HomePage : UserControl
     private static bool avvisaTalloneFinito = true, briscolaDaPunti = false, primaUtente = true, stessoSeme = false;
     private static GiocatoreHelperCpu helper;
     private static readonly string folder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CBriscola.Avalonia");
-
+    private static ILauncher? launcher = null;
     private ElaboratoreCarteBriscola e;
     private Stream asset;
     public Opzioni o;
@@ -268,13 +269,10 @@ public partial class HomePage : UserControl
         if (stessoSeme)
             s = "bussata%20";
 
-        var psi = new ProcessStartInfo
-        {
-            FileName = $"https://twitter.com/intent/tweet?text=Con%20la%20CBriscola.avalonia%20{s}la%20partita%20numero%20{partite}%20{g.GetNome()}%20contro%20{cpu.GetNome()}%20%C3%A8%20finita%20{puntiUtente}%20a%20{puntiCpu}%20col%20mazzo%20{m.GetNome()}%20su%20piattaforma%20{App.SistemaOperativo}&url=https%3A%2F%2Fgithub.com%2Fnumerunix%2Fcbriscola.Avalonia",
-            UseShellExecute = true
-        };
+        if (launcher == null)
+            launcher = TopLevel.GetTopLevel(this).Launcher;
+        launcher.LaunchUriAsync(new Uri($"https://twitter.com/intent/tweet?text=Con%20la%20CBriscola.avalonia%20{s}la%20partita%20numero%20{partite}%20{g.GetNome()}%20contro%20{cpu.GetNome()}%20%C3%A8%20finita%20{puntiUtente}%20a%20{puntiCpu}%20col%20mazzo%20{m.GetNome()}%20su%20piattaforma%20{App.SistemaOperativo}&url=https%3A%2F%2Fgithub.com%2Fnumerunix%2Fcbriscola.Avalonia"));
         fpShare.IsEnabled = false;
-        Process.Start(psi);
     }
     private Opzioni CaricaOpzioni()
     {
