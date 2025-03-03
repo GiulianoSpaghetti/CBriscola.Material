@@ -19,7 +19,7 @@
 		<Label Grid.Row="1">ⓒ Giulio Sorrentino 2023-2025</Label>
 		<Label Grid.Row="2">License: GPL v3 or, in your humble opinion, any later version</Label>
 		<Label Grid.Row="3">This trump wins because it scores more points not because it deals the cards, therefore also taking the 8s, 9s and 10s</Label>
-		<Button Click="OnSito_Click" Grid.Row="4">https://github.com/GiulianoSpaghetti/CBriscola.Material</Button>
+		<Button Click="OnSito_Click" Grid.Row="4">More Informations</Button>
 	</Grid>
 
 </UserControl>

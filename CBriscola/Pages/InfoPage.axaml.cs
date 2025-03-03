@@ -10,7 +10,7 @@ namespace CBriscola.Pages;
 public partial class InfoPage : UserControl
 {
     private static Avalonia.Platform.Storage.ILauncher? launcher=null;
-    private static readonly Uri HomePage=new Uri("https://github.com/GiulianoSpaghetti/cbriscola.material");
+    private static readonly Uri HomePage=new Uri("https://github.com/GiulianoSpaghetti/CBriscola.Material");
     public InfoPage()
     {
         InitializeComponent();
