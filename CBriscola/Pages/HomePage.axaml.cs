@@ -388,7 +388,7 @@ public partial class HomePage : UserControl
             puntiUtente = puntiCpu = 0;
         e = new ElaboratoreCarteBriscola(o.briscolaDaPunti);
         m = new Mazzo(e);
-        Carta.SetHelper(cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()));
+        Carta.SetHelper(cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), m);
         m.SetNome(o.nomeMazzo);
         briscola = Carta.GetCarta(ElaboratoreCarteBriscola.GetCartaBriscola());
         switch (o.livello)
@@ -453,7 +453,7 @@ public partial class HomePage : UserControl
         UInt16 quale = 0;
         Image img1 = Cpu0;
         if (primo == cpu)
-            cpu.Gioca(0);
+            cpu.Gioca(0, stessoSeme);
         else
             cpu.Gioca(0, g, stessoSeme);
         quale = cpu.GetICartaGiocata();

@@ -6,8 +6,8 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15873f48eb4" Name="CBriscola.Avalonia" Language="1033" Version="0.9.6" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
-    <SummaryInformation Codepage="Windows-1252" Description="Simulatore del gioco della briscola in avalonia col dialetto Material di Google a due giocatori senza multiplayer" />
+  <Package Compressed="yes" ProductCode="68b61de0-07a0-499e-b3fb-f15883741eb4" Name="CBriscola.Avalonia" Language="1033" Version="1.0" UpgradeCode="68b61de0-07a0-499e-b3fb-f15873641eb4" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
+    <SummaryInformation Codepage="Windows-1252" Description="Simulatore del gioco della briscola in avalonia a due giocatori senza multiplayer in dialetto Material di Google di avalonia" />
     <Media Id="1" Cabinet="CBriscola.Avalonia.cab" EmbedCab="yes" />
 
     <StandardDirectory Id="ProgramFiles64Folder">
@@ -15,6 +15,14 @@
 
         <Component Id="Component.Avalonia.Base.dll_2217997137" Guid="68b61de0-07a0-499e-b3fb-f158928f379c" Bitness="always64">
           <File Id="Avalonia.Base.dll_2217997137" Source="Avalonia.Base.dll" />
+        </Component>
+
+        <Component Id="Component.Avalonia.Controls.ColorPicker.dll_1050786028" Guid="68b61de0-07a0-499e-b3fb-f1588411a3ba" Bitness="always64">
+          <File Id="Avalonia.Controls.ColorPicker.dll_1050786028" Source="Avalonia.Controls.ColorPicker.dll" />
+        </Component>
+
+        <Component Id="Component.Avalonia.Controls.DataGrid.dll_289138711" Guid="68b61de0-07a0-499e-b3fb-f158cb9bb4a7" Bitness="always64">
+          <File Id="Avalonia.Controls.DataGrid.dll_289138711" Source="Avalonia.Controls.DataGrid.dll" />
         </Component>
 
         <Component Id="Component.Avalonia.Controls.dll_2783528202" Guid="68b61de0-07a0-499e-b3fb-f1586138b6b2" Bitness="always64">
@@ -83,6 +91,10 @@
 
         <Component Id="Component.Avalonia.Themes.Fluent.dll_2845796681" Guid="68b61de0-07a0-499e-b3fb-f1584e6d42bc" Bitness="always64">
           <File Id="Avalonia.Themes.Fluent.dll_2845796681" Source="Avalonia.Themes.Fluent.dll" />
+        </Component>
+
+        <Component Id="Component.Avalonia.Themes.Simple.dll_1474049084" Guid="68b61de0-07a0-499e-b3fb-f15820dddfe9" Bitness="always64">
+          <File Id="Avalonia.Themes.Simple.dll_1474049084" Source="Avalonia.Themes.Simple.dll" />
         </Component>
 
         <Component Id="Component.Avalonia.Vulkan.dll_1756901464" Guid="68b61de0-07a0-499e-b3fb-f1584f54d268" Bitness="always64">
@@ -234,7 +246,7 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <WixVariable Id="WixUILicenseRtf" Value="C:\Users\numer\source\repos\CBriscola\CBriscola.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="F:\source\CBriscola.Material\CBriscola.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
 
     <UIRef Id="WixUI_ErrorProgressText" />
 
@@ -242,6 +254,8 @@
 
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
       <ComponentRef Id="Component.Avalonia.Base.dll_2217997137" />
+      <ComponentRef Id="Component.Avalonia.Controls.ColorPicker.dll_1050786028" />
+      <ComponentRef Id="Component.Avalonia.Controls.DataGrid.dll_289138711" />
       <ComponentRef Id="Component.Avalonia.Controls.dll_2783528202" />
       <ComponentRef Id="Component.Avalonia.DesignerSupport.dll_1252264274" />
       <ComponentRef Id="Component.Avalonia.Desktop.dll_3440118340" />
@@ -259,6 +273,7 @@
       <ComponentRef Id="Component.Avalonia.Remote.Protocol.dll_856865421" />
       <ComponentRef Id="Component.Avalonia.Skia.dll_1262385531" />
       <ComponentRef Id="Component.Avalonia.Themes.Fluent.dll_2845796681" />
+      <ComponentRef Id="Component.Avalonia.Themes.Simple.dll_1474049084" />
       <ComponentRef Id="Component.Avalonia.Vulkan.dll_1756901464" />
       <ComponentRef Id="Component.Avalonia.Win32.dll_2128635293" />
       <ComponentRef Id="Component.Avalonia.X11.dll_3918326533" />

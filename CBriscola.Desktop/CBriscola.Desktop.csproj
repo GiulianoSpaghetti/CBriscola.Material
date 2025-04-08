@@ -8,18 +8,23 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia.Angle.Windows.Natives" Version="2.1.22087.20231008" />
     <PackageReference Include="Avalonia.BuildServices" Version="0.0.31" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.2.5" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.6" />
+    <PackageReference Include="CardFramework.avalonia" Version="1.4.12" />
     <PackageReference Include="DynamicData" Version="9.2.1" />
     <PackageReference Include="HarfBuzzSharp" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.macOS" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" Version="8.3.0.1" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Win32" Version="8.3.0.1" />
-    <PackageReference Include="Material.Avalonia" Version="3.9.2" />
+    <PackageReference Include="Material.Avalonia" Version="3.10.1" />
     <PackageReference Include="ReactiveUI" Version="20.2.45" />
     <PackageReference Include="SkiaSharp" Version="3.116.1" />
     <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />

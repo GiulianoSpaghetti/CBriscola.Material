@@ -5,6 +5,7 @@
      <RootNamespace>WixSharp</RootNamespace>
     <TargetFramework>net472</TargetFramework>
      <RootNamespace>WixSharp</RootNamespace>
+	  <Nullable>disable</Nullable>
   </PropertyGroup>
   
   <ItemGroup>
@@ -16,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WixSharp_wix4" Version="2.6.0" />
-    <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="5.0.2" />
+    <PackageReference Include="WixSharp_wix4" Version="2.6.1" />
+    <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="6.0.0" />
     <PackageReference Include="WixToolset.Mba.Core" Version="4.0.6" />
   </ItemGroup>
 
