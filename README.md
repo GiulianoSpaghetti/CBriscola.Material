@@ -106,8 +106,8 @@ Bisogna programmarle per essere readonly.
 
 Mi spiego:
 
-private static resourcedictionary dic;
-public static resourcedictionary d{ get {return dic;} }
+    private static resourcedictionary dic;
+    public static resourcedictionary d{ get {return dic;} }
 
 dic va modificato una sola volta, proprio come faccio, quindi il dizionario è un esempio di property in avalonia ben fatta.
 
