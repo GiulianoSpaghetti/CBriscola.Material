@@ -99,6 +99,21 @@ In questa versione non è possibile vedere più di due avvisi nella notifica, a 
 
 Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazzo napoletano e l'avviso non è garantito che esca.
 
+## Le Property in avalonia
+
+Per chi non lo sapesse, le property in avalonia dovrebbero essere scrivibili una sola volta e sempre leggibili, solo che avalonia è in c# e le property in c# sono r/w.
+Bisogna programmarle per essere readonly.
+
+Mi spiego:
+
+private static resourcedictionary dic;
+public static resourcedictionary d{ get {return dic;} }
+
+dic va modificato una sola volta, proprio come faccio, quindi il dizionario è un esempio di property in avalonia ben fatta.
+
+Gli unici che possono definire anche il set sono proprio gli autori di avalonia.
+
+E' semplicissimo.
 
 ## Screenshot
 
