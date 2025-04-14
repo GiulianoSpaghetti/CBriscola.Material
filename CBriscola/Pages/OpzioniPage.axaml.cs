@@ -34,7 +34,7 @@ public partial class OpzioniPage : UserControl
         cbLivello.SelectedIndex = HomePage.Instance.o.livello-1;
         ListBoxItem item;
         String s1 = "";
-        string dirs = System.IO.Path.Combine(App.path, "Mazzi");
+        string dirs = System.IO.Path.Combine(App.Path, "Mazzi");
 
         try
         {

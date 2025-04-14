@@ -25,7 +25,7 @@
 									<Setter Property="VerticalContentAlignment" Value="Center" />
 								</Style>
 							</ListBox.Styles>
-							<ListBoxItem Name="HomeTitle">Home</ListBoxItem>
+							<ListBoxItem Name="HomeTitle">CBriscola</ListBoxItem>
 							<ListBoxItem Name="OptionsTitle">Options</ListBoxItem>
 							<ListBoxItem Name="InfoTitle">Informations</ListBoxItem>
 						</ListBox>

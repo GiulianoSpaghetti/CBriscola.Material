@@ -12,9 +12,10 @@ namespace CBriscola;
 
 public partial class App : Application
 {
-    public static string SistemaOperativo;
-    public static string path;
-
+    private static string sistemaOperativo;
+    private static string path;
+    public static string Path { get => path; }
+    public static string SistemaOperativo { get => sistemaOperativo; }
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -27,7 +28,7 @@ public partial class App : Application
             if (OperatingSystem.IsWindows())
             {
                 path = "C:\\Program Files\\wxBriscola";
-                SistemaOperativo = Environment.OSVersion.ToString();
+                sistemaOperativo = Environment.OSVersion.ToString();
             }
             else if (OperatingSystem.IsLinux())
             {
@@ -35,19 +36,19 @@ public partial class App : Application
                 try
                 {
                     streamReader = new StreamReader(File.OpenRead("/sys/devices/virtual/dmi/id/product_sku"), Encoding.UTF8, true, 128);
-                    SistemaOperativo = streamReader.ReadLine();
+                    sistemaOperativo = streamReader.ReadLine();
                     streamReader.Close();
                 }
                 catch (System.IO.DirectoryNotFoundException ex)
                 {
-                    SistemaOperativo = "SKU";
+                    sistemaOperativo = "SKU";
                 }
                 catch (System.IO.FileNotFoundException)
                 {
-                    SistemaOperativo = "SKU";
+                    sistemaOperativo = "SKU";
                 }
                 if (SistemaOperativo=="SKU")
-                	SistemaOperativo = "GNU/Linux";
+                	sistemaOperativo = "GNU/Linux";
                 path = "/usr/share/wxBriscola";
             }
 

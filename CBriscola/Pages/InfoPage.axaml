@@ -14,12 +14,14 @@
 			<RowDefinition />
 			<RowDefinition />
 			<RowDefinition />
+			<RowDefinition />
 		</Grid.RowDefinitions>
 		<Label Grid.Row="0">CBriscola versione 1.0</Label>
 		<Label Grid.Row="1">ⓒ Giulio Sorrentino 2023-2025</Label>
 		<Label Grid.Row="2">License: GPL v3 or, in your humble opinion, any later version</Label>
 		<Label Grid.Row="3">This trump wins because it scores more points not because it deals the cards, therefore also taking the 8s, 9s and 10s</Label>
-		<Button Click="OnSito_Click" Grid.Row="4">More Informations</Button>
+		<Label Grid.Row="4">The cards are property of modiano, c# is property of Microsoft Corporation, Avalonia is a registered trademark and Material is property of Google LCC</Label>
+		<Button Click="OnSito_Click" Grid.Row="5">More Informations</Button>
 	</Grid>
 
 </UserControl>

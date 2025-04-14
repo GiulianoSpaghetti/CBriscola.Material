@@ -31,7 +31,7 @@ public partial class HomePage : UserControl
     private static ILauncher? launcher = null;
     private ElaboratoreCarteBriscola e;
     private Stream asset;
-    public Opzioni o;
+    internal Opzioni o;
     private static org.altervista.numerone.framework.briscola.CartaHelper cartaHelper;
 
 
@@ -52,7 +52,7 @@ public partial class HomePage : UserControl
 
     public static void Traduci()
     {
-        if (!Carta.Inizializza(App.path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola"))
+        if (!Carta.Inizializza(App.Path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola"))
         {
             try
             {
@@ -61,7 +61,7 @@ public partial class HomePage : UserControl
             catch (InvalidOperationException ex)
             {
                 m.SetNome("Napoletano");
-                Carta.Inizializza(App.path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola");
+                Carta.Inizializza(App.Path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola");
             }
      
         }
@@ -74,7 +74,7 @@ public partial class HomePage : UserControl
         else
             try
             {
-                cartaCpu.Source = new Bitmap(System.IO.Path.Combine(System.IO.Path.Combine(System.IO.Path.Combine(App.path, "Mazzi"), m.GetNome()), "retro carte pc.png"));
+                cartaCpu.Source = new Bitmap(System.IO.Path.Combine(System.IO.Path.Combine(System.IO.Path.Combine(App.Path, "Mazzi"), m.GetNome()), "retro carte pc.png"));
             }
             catch (Exception ex)
             {
@@ -491,7 +491,7 @@ public partial class HomePage : UserControl
         if (Instance.o.nomeMazzo != m.GetNome())
         { 
             m.SetNome(Instance.o.nomeMazzo);
-            if (!Carta.CaricaImmagini(App.path, m, 40, MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola")
+            if (!Carta.CaricaImmagini(App.Path, m, 40, MainWindow.d["bastoni"] as string, MainWindow.d["coppe"] as string, MainWindow.d["denari"] as string, MainWindow.d["spade"] as string, MainWindow.d["Fiori"] as string, MainWindow.d["Quadri"] as string, MainWindow.d["Cuori"] as string, MainWindow.d["Picche"] as string, "CBriscola")
 )
             {
                 s1=$"{MainWindow.d["MazzoNonTrovatoTesto"]}\r\n";
@@ -517,7 +517,7 @@ public partial class HomePage : UserControl
             if (m.GetNome() != "Napoletano")
                 try
                 {
-                    cartaCpu.Source = new Bitmap(System.IO.Path.Combine(System.IO.Path.Combine(System.IO.Path.Combine(App.path, "Mazzi"), m.GetNome()), "retro carte pc.png"));
+                    cartaCpu.Source = new Bitmap(System.IO.Path.Combine(System.IO.Path.Combine(System.IO.Path.Combine(App.Path, "Mazzi"), m.GetNome()), "retro carte pc.png"));
                 }
                 catch (System.IO.FileNotFoundException ex)
                 {

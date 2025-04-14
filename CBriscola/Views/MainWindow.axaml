@@ -20,7 +20,7 @@
 			<x:String x:Key="NomeUtente">Nome Utente</x:String>
 			<x:String x:Key="NomeCpu">Nome Cpu</x:String>
 			<x:String x:Key="giocataVista">Ho visto la giocata</x:String>
-			<x:String x:Key="Applicazione">Applicazione</x:String>
+			<x:String x:Key="Applicazione">CBriscola Material</x:String>
 			<x:String x:Key="Informazioni">Informazioni</x:String>
 			<x:String x:Key="Opzioni">Opzioni</x:String>
 			<x:String x:Key="PartitaPatta">La partita è patta</x:String>
@@ -61,7 +61,7 @@
 			<x:String x:Key="VarianteNormaleTesto">Hai scelto di giocare la variante normale, la partita verrà riavviata</x:String>
 			<x:String x:Key="MossaNonConsentitaTitolo">Mossa non consentita</x:String>
 			<x:String x:Key="MossaNonConsentitaTesto">Devi rispondere al seme</x:String>
-			<x:String x:Key="RitornaallaHome">Ritorna alla prima scheda per vedere le modifiche</x:String>
+			<x:String x:Key="RitornaallaHome">Ritorna a CBriscola Material per vedere le modifiche</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="en">
 			<x:String x:Key="PuntiDiPrefisso">&#160;</x:String>
@@ -74,7 +74,7 @@
 			<x:String x:Key="NomeUtente">User name</x:String>
 			<x:String x:Key="NomeCpu">Cpu name</x:String>
 			<x:String x:Key="giocataVista">I've seen the plays</x:String>
-			<x:String x:Key="Applicazione">Application</x:String>
+			<x:String x:Key="Applicazione">CBriscola Material</x:String>
 			<x:String x:Key="Informazioni">Informations</x:String>
 			<x:String x:Key="Opzioni">Options</x:String>
 			<x:String x:Key="PartitaPatta">The game is drown</x:String>
@@ -115,7 +115,7 @@
 			<x:String x:Key="VarianteNormaleTesto">You have chosen to play the normal variant, the game will be restarted</x:String>
 			<x:String x:Key="MossaNonConsentitaTitolo">Move not allowed</x:String>
 			<x:String x:Key="MossaNonConsentitaTesto">You have to respond to the suit</x:String>
-			<x:String x:Key="RitornaallaHome">Return to the first tab to see the changes</x:String>
+			<x:String x:Key="RitornaallaHome">Return to CBriscola Material to see the changes</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="de">
 			<x:String x:Key="PuntiDiPrefisso">&#160;</x:String>
@@ -128,7 +128,7 @@
 			<x:String x:Key="NomeUtente">Nutzername</x:String>
 			<x:String x:Key="NomeCpu">CPU-Name</x:String>
 			<x:String x:Key="giocataVista">Ich habe die Theaterstücke gesehen</x:String>
-			<x:String x:Key="Applicazione">Anwendung</x:String>
+			<x:String x:Key="Applicazione">CBriscola Material</x:String>
 			<x:String x:Key="Informazioni">Informationen</x:String>
 			<x:String x:Key="Opzioni">Optionen</x:String>
 			<x:String x:Key="PartitaPatta">Das Spiel ist ertränkt</x:String>
@@ -169,7 +169,7 @@
 			<x:String x:Key="VarianteNormaleTesto">Sie haben sich für die normale Variante entschieden, das Spiel wird neu gestartet</x:String>
 			<x:String x:Key="MossaNonConsentitaTitolo">Bewegung nicht erlaubt</x:String>
 			<x:String x:Key="MossaNonConsentitaTesto">Sie müssen auf den Anzung reagieren</x:String>
-			<x:String x:Key="RitornaallaHome">Kehren Sie zur ersten Registerkarte zurück, um die Änderungen anzuzeigen</x:String>
+			<x:String x:Key="RitornaallaHome">Kehren Sie zum CBriscola-Material zurück, um die Änderungen anzuzeigen</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="fr">
 			<x:String x:Key="PuntiDiPrefisso">Points de</x:String>
@@ -182,7 +182,7 @@
 			<x:String x:Key="NomeUtente">Nom d'utilisateur</x:String>
 			<x:String x:Key="NomeCpu">CNom du processeur</x:String>
 			<x:String x:Key="giocataVista">J'ai vu les pièces</x:String>
-			<x:String x:Key="Applicazione">Application</x:String>
+			<x:String x:Key="Applicazione">CBriscola Material</x:String>
 			<x:String x:Key="Informazioni">Informations</x:String>
 			<x:String x:Key="Opzioni">Choix</x:String>
 			<x:String x:Key="PartitaPatta">Le jeu est noyé</x:String>
@@ -223,7 +223,7 @@
 			<x:String x:Key="VarianteNormaleTesto">Vous avez choisi de jouer à la variante normale, le jeu va redémarrer</x:String>
 			<x:String x:Key="MossaNonConsentitaTitolo">Déplacement interdit</x:String>
 			<x:String x:Key="MossaNonConsentitaTesto">Vous devez répondre à la costume</x:String>
-			<x:String x:Key="RitornaallaHome">Revenez au premier onglet pour voir les changements</x:String>
+			<x:String x:Key="RitornaallaHome">Revenez au CBriscola Material pour voir les changements</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="es">
 			<x:String x:Key="PuntiDiPrefisso">Puntos de</x:String>
@@ -236,7 +236,7 @@
 			<x:String x:Key="NomeUtente">Nombre de usuario</x:String>
 			<x:String x:Key="NomeCpu">Nombre de la CPU</x:String>
 			<x:String x:Key="giocataVista">He visto los juegos</x:String>
-			<x:String x:Key="Applicazione">Solicitud</x:String>
+			<x:String x:Key="Applicazione">CBriscola Material</x:String>
 			<x:String x:Key="Informazioni">Informaciones</x:String>
 			<x:String x:Key="Opzioni">Opciones</x:String>
 			<x:String x:Key="PartitaPatta">El juego se ahoga</x:String>
@@ -277,7 +277,7 @@
 			<x:String x:Key="VarianteNormaleTesto">Has elegido jugar la variante normal, el juego se reiniciará.</x:String>
 			<x:String x:Key="MossaNonConsentitaTitolo">Mover no permitido</x:String>
 			<x:String x:Key="MossaNonConsentitaTesto">Tienes que responder a la traje.</x:String>
-			<x:String x:Key="RitornaallaHome">Regrese a la primera pestaña para ver los cambios.</x:String>
+			<x:String x:Key="RitornaallaHome">Regrese a CBriscola Material para ver los cambios.</x:String>
 		</ResourceDictionary>
 	</Window.Resources>
 

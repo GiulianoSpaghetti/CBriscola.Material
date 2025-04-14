@@ -6,16 +6,18 @@ namespace CBriscola.Views;
 
 public partial class MainWindow : Window
 {
-    public static ResourceDictionary d;
-    public static MainWindow Instance;
+    private static ResourceDictionary dic;
+    public static ResourceDictionary d {  get => dic; }
+    private static MainWindow instance;
+    public static MainWindow Instance { get => instance; }
 
     public MainWindow()
     {
         InitializeComponent();
-        Instance = this;
-        d = this.FindResource(CultureInfo.CurrentCulture.TwoLetterISOLanguageName) as ResourceDictionary;
-        if (d == null)
-            d = this.FindResource("it") as ResourceDictionary;
+        instance = this;
+        dic = this.FindResource(CultureInfo.CurrentCulture.TwoLetterISOLanguageName) as ResourceDictionary;
+        if (dic == null)
+            dic = this.FindResource("it") as ResourceDictionary;
         MainView.Traduci();
         HomePage.Traduci();
         OpzioniPage.Traduci();
