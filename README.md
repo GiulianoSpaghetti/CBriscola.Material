@@ -15,6 +15,8 @@ Dal momento che avalonia ha i timer che vengono blacklistati, c'è il pulsante p
 
 Permette di usare la variante "bussata" nella quale bisogna rispondere al seme (il "poker" nella teoria dei giochi).
 
+Questa variante, a partire dalla versione 1.0, ha la particolarità che l'IA si fissa sul seme "primo di mano" quindi risulta molto più difficile vincere.
+
 E' in avalonia, ma col dialetto material di google, ma senza usare il foglio di stile di google, ma usando la reactive ui (si legge multithreaded)
 
 ## Use case
