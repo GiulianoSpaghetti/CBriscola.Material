@@ -66,13 +66,13 @@ public partial class OpzioniPage : UserControl
 
     public static void Traduci()
     {
-        Instance.lbCartaBriscola.Content = $"{MainWindow.d["BriscolaDaPunti"]}";
-        Instance.lbAvvisaTallone.Content = $"{MainWindow.d["AvvisaTallone"]}";
-        Instance.opNomeUtente.Content = $"{MainWindow.d["NomeUtente"]}: ";
-        Instance.opNomeCpu.Content = $"{MainWindow.d["NomeCpu"]}: ";
-        Instance.lbmazzi.Content = $"{MainWindow.d["Mazzo"]}";
-        Instance.lbLivello.Content = $"{MainWindow.d["Livello"]}";
-        Instance.lbStessoSeme.Content = $"{MainWindow.d["VarianteStessoSeme"]}";
+        Instance.lbCartaBriscola.Content = $"{MainWindow.Dictionary["BriscolaDaPunti"]}";
+        Instance.lbAvvisaTallone.Content = $"{MainWindow.Dictionary["AvvisaTallone"]}";
+        Instance.opNomeUtente.Content = $"{MainWindow.Dictionary["NomeUtente"]}: ";
+        Instance.opNomeCpu.Content = $"{MainWindow.Dictionary["NomeCpu"]}: ";
+        Instance.lbmazzi.Content = $"{MainWindow.Dictionary["Mazzo"]}";
+        Instance.lbLivello.Content = $"{MainWindow.Dictionary["Livello"]}";
+        Instance.lbStessoSeme.Content = $"{MainWindow.Dictionary["VarianteStessoSeme"]}";
 
     }
     public void OnOk_Click(Object source, RoutedEventArgs evt)
@@ -98,6 +98,6 @@ public partial class OpzioniPage : UserControl
             HomePage.Instance.o.nomeMazzo=(string)i.Content;
         HomePage.Instance.o.livello = (UInt16) (cbLivello.SelectedIndex + 1);
         HomePage.GestisciOpzioni(out s);
-        MainView.MakeNotification($"{s}{MainWindow.d["RitornaallaHome"]}");
+        MainView.MakeNotification($"{s}{MainWindow.Dictionary["RitornaallaHome"]}");
     }
 }
