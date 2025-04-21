@@ -27,7 +27,7 @@ namespace cbriscola.avalonia_setup
             );
 
             project.GUID = new Guid("68B61DE0-07A0-499E-B3FB-F15873641EB4");
-            project.Version = new Version("1.0");
+            project.Version = new Version("1.1.1.0");
             project.Platform = Platform.x64;
             project.SourceBaseDir = "F:\\source\\CBriscola.Material\\CBriscola.Desktop\\bin\\Release\\net9.0-windows10.0.26100.0";
             project.LicenceFile = "LICENSE.rtf";

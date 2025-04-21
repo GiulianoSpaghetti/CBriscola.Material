@@ -18,7 +18,7 @@ namespace CBriscola.Pages;
 public partial class OpzioniPage : UserControl
 {
 
-    public static OpzioniPage Instance;
+    public static OpzioniPage Instance { get; private set; }
     public OpzioniPage()
     {
         InitializeComponent();
