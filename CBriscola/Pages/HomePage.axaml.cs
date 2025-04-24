@@ -13,6 +13,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Text.Json;
 
 namespace CBriscola.Pages;
 
@@ -283,7 +284,7 @@ public partial class HomePage : UserControl
     }
     private Opzioni LeggiOpzioni()
     {
-        Opzioni o;
+        Opzioni? o;
         if (!System.IO.Path.Exists(folder))
             Directory.CreateDirectory(folder);
         StreamReader file = null;
@@ -292,14 +293,19 @@ public partial class HomePage : UserControl
             file = new StreamReader(System.IO.Path.Combine(folder, "opzioni.json"));
             try
             {
-                o = Newtonsoft.Json.JsonConvert.DeserializeObject<Opzioni>(file.ReadToEnd());
+                o = JsonSerializer.Deserialize<Opzioni>(file.ReadToEnd());
             }
-            catch (Newtonsoft.Json.JsonReaderException ex)
+            catch (JsonException ex)
             {
                 o = null;
                 file.Close();
             }
-            catch (Newtonsoft.Json.JsonSerializationException ex1)
+            catch (NotSupportedException ex1)
+            {
+                o = null;
+                file.Close();
+            }
+            catch (ArgumentNullException ex2)
             {
                 o = null;
                 file.Close();
@@ -327,7 +333,7 @@ public partial class HomePage : UserControl
     private void SalvaOpzioni(Opzioni o)
     {
         StreamWriter w = new StreamWriter($"{System.IO.Path.Combine(folder, "opzioni.json")}");
-        w.Write(Newtonsoft.Json.JsonConvert.SerializeObject(o));
+        w.Write(JsonSerializer.Serialize(o));
         w.Close();
     }
 
