@@ -27,22 +27,16 @@ Questo è il motto registrato per questa briscola.
 
 # Come installare
 
-## Su Windows
 
 I binari aggiornati li trovate su pling (https://www.pling.com/p/2296516/)
 
 Prerequisiti:
 
+## Windows
+
 https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.9
 
-## Su GNU/linux
-Seguite le istruzioni su http://numeronesoft.ddns.net:8080
-
-NOTA BENE: la connessione a numeronesoft.ddns.net non e https
-
-Poi installate cbriscola.avalonia
-
-Prerequisiti:
+## Debian
 
 https://learn.microsoft.com/en-us/linux/packages
 
