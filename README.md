@@ -117,7 +117,7 @@ E' semplicissimo.
 
 ## Video di presentazione
 
-https://photos.app.goo.gl/Y2K9T1A2BMZSc7bB8
+https://www.youtube.com/watch?v=wraMolVGKB0&t=6s
 
 ## Donazione
 
