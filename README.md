@@ -40,10 +40,6 @@ https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.9
 
 https://learn.microsoft.com/en-us/linux/packages
 
-Note: i package sono system indpedent ed IL, per cui in teoria è sufficiente reinstallare il pacchetto ad ogni aggiornamento del desktop runtime ed avviare il programma una volta per ottenere il codice binario aggiornato.
-Ovviamente se aggiornano avalonia bisogna ricompilare.
-
-
 ATTENZIONE:
 
 Avalonia si basa su due librerie native libharfbuzzsharp e libskiasharp che non sono libere, quindi avalonia non è libero.
