@@ -27,8 +27,7 @@ Questo è il motto registrato per questa briscola.
 
 # Come installare
 
-
-I binari aggiornati li trovate su pling (https://www.pling.com/p/2296516/)
+[![pling](http://numeronesoft.ddns.net:8080/images/pling.png)](https://www.pling.com/p/2296516/)
 
 Prerequisiti:
 
