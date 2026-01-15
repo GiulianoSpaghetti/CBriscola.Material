@@ -26,18 +26,27 @@ Questo è il motto registrato per questa briscola.
 
 
 # Come installare
+## Windows e Unix
 
 [![pling](http://numeronesoft.ddns.net:8080/images/pling.png)](https://www.pling.com/p/2296516/)
 
-Prerequisiti:
+### Prerequisiti:
 
-## Windows
+#### Windows
 
 https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.9
 
-## Debian
+#### Unix
 
-https://learn.microsoft.com/en-us/linux/packages
+https://learn.microsoft.com/it-it/linux/packages
+
+Bisogna installare libice6 e libsm6 e bisogna precaricare freetype per farlo funzionare.
+
+E' stato dimostrato che il software è perfettamente bilanciato, perché il binario viene ottimizzato dal dotnet.
+
+
+## Per debian
+Il pacchetto è disponibile nel mio repository. Tutte le istruzioni le trovate su http://numeronesoft.ddns.net:8080, basta installare cbriscola.avalonia per amd64 e per arm64, in alternativa potete prendere la versione unix, sapendo che il binario è per amd64 ed avviarlo con dotnet /usr/game/cbriscola.avalonia/cbriscola.avalonia.Desktop.dll.
 
 ATTENZIONE:
 
