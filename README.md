@@ -34,7 +34,7 @@ Questo è il motto registrato per questa briscola.
 
 #### Windows
 
-https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.9
+https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.10
 
 #### Unix
 
