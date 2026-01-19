@@ -24,8 +24,28 @@ Le carte si vedono più grandi sui tablet in modalità portrait e non landscape,
 
 Questo è il motto registrato per questa briscola.
 
-
 # Come installare
+
+## Android
+
+C'è una beta pubblica.
+
+[![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/apps/testing/org.altervista.numerone.cbriscolamaui)
+
+Chi ha comprato la prima cbriscola maui (anche coi voucher che ho distribuito) non dovrà pagare nulla, ma finché non si trova il modo di sistemare gli accenti il prodotto non può diventare completo.
+Per quanto riguarda i mazzi aggiuntivi, al momento non c'è modo di installarli, se non facendo modifiche illegali ai telefoni per cui vi sconsiglio di farlo.
+A tal proposito, vi voglio segnalare [il mio video](https://www.youtube.com/watch?v=NpTP7cg3xpE) per capire prché al momento non c'è modo di avere i DLC su android con dotnet.
+
+Bug noti della versione per android:
+
+I mazzi aggiuntivi non possono essere installati
+
+Gli accenti vengono visualizzati "a la ascii"
+
+Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del telefono e l'IA si è arrabbiata. IL sistema funziona e bisogna solo aspettare che le IA del telefono si calmino.
+
+[Trailer della beta privata](https://youtu.be/oja1eVcYynQ?si=twNNwyQsZn1oOP8o)
+
 ## Windows e Unix
 
 [![pling](http://numeronesoft.ddns.net:8080/images/pling.png)](https://www.pling.com/p/2296516/)
