@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="C:/Users/numer/source/repos/10/CBriscola/cbriscola.avalonia-setup/cbriscola.avalonia-setup.csproj" />
+  <Project Path="CBriscola.Android/CBriscola.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="CBriscola.Browser/CBriscola.Browser.csproj" />
+  <Project Path="CBriscola.Desktop/CBriscola.Desktop.csproj" />
+  <Project Path="CBriscola.iOS/CBriscola.iOS.csproj" />
+  <Project Path="CBriscola/CBriscola.csproj" />
+</Solution>

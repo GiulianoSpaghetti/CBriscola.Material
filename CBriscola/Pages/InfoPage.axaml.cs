@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using CBriscola.ViewModels;
 using System;
 using System.Diagnostics;
 
@@ -10,9 +11,10 @@ namespace CBriscola.Pages;
 public partial class InfoPage : UserControl
 {
     private static Avalonia.Platform.Storage.ILauncher? launcher=null;
-    public static readonly Uri HomePage=new Uri("https://github.com/GiulianoSpaghetti/CBriscola.Material");
+    public static readonly Uri HomePage=new Uri("https://www.opencode.net/numerone/CBriscola-Material");
     public InfoPage()
     {
+        DataContext ??= MainViewModel.GetMainViewModelInstance();
         InitializeComponent();
         
     }

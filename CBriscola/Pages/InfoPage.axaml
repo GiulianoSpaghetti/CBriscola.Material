@@ -16,7 +16,7 @@
 			<RowDefinition />
 			<RowDefinition />
 		</Grid.RowDefinitions>
-		<Label Grid.Row="0">CBriscola versione 1.2</Label>
+		<Label Grid.Row="0">CBriscola versione 2.0</Label>
 		<Label Grid.Row="1">ⓒ Giulio Sorrentino 2023-2026</Label>
 		<Label Grid.Row="2">License: GPL v3 or, in your humble opinion, any later version</Label>
 		<Label Grid.Row="3">This trump wins because it scores more points not because it deals the cards, therefore also taking the 8s, 9s and 10s</Label>

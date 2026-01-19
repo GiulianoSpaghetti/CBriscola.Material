@@ -4,23 +4,27 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using CBriscola.ViewModels;
+using CBriscola.Views;
 using Material.Styles.Controls;
 using Metsys.Bson;
-using static System.Net.Mime.MediaTypeNames;
-using System.Reflection;
 using System;
-using CBriscola.Views;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
+using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CBriscola.Pages;
 
 public partial class OpzioniPage : UserControl
 {
 
-    public static OpzioniPage Instance { get; private set; }
+    internal static OpzioniPage Instance { get; private set; }
+    private readonly string dirs = System.IO.Path.Combine(App.Path, "Mazzi");
     public OpzioniPage()
     {
+        DataContext ??= MainViewModel.GetMainViewModelInstance();
         InitializeComponent();
         Instance = this;
         lsmazzi.Items.Clear();
@@ -29,12 +33,12 @@ public partial class OpzioniPage : UserControl
         tsCartaBriscola.IsChecked = HomePage.Instance.o.briscolaDaPunti;
         tsAvvisaTallone.IsChecked = HomePage.Instance.o.avvisaTalloneFinito;
         tsStessoSeme.IsChecked = HomePage.Instance.o.stessoSeme;
+        cbLivello.SelectedIndex = HomePage.Instance.o.livello - 1;
         List<ListBoxItem> mazzi;
         List<String> path;
-        cbLivello.SelectedIndex = HomePage.Instance.o.livello-1;
+        cbLivello.SelectedIndex = HomePage.Instance.o.livello - 1;
         ListBoxItem item;
         String s1 = "";
-        string dirs = System.IO.Path.Combine(App.Path, "Mazzi");
 
         try
         {
@@ -59,20 +63,17 @@ public partial class OpzioniPage : UserControl
             lsmazzi.Items.Add(item);
 
         }
-
-
-
     }
 
     public static void Traduci()
     {
-        Instance.lbCartaBriscola.Content = $"{MainWindow.Dictionary["BriscolaDaPunti"]}";
-        Instance.lbAvvisaTallone.Content = $"{MainWindow.Dictionary["AvvisaTallone"]}";
-        Instance.opNomeUtente.Content = $"{MainWindow.Dictionary["NomeUtente"]}: ";
-        Instance.opNomeCpu.Content = $"{MainWindow.Dictionary["NomeCpu"]}: ";
-        Instance.lbmazzi.Content = $"{MainWindow.Dictionary["Mazzo"]}";
-        Instance.lbLivello.Content = $"{MainWindow.Dictionary["Livello"]}";
-        Instance.lbStessoSeme.Content = $"{MainWindow.Dictionary["VarianteStessoSeme"]}";
+        Instance.lbCartaBriscola.Content = $"{MainView.Dictionary["BriscolaDaPunti"]}";
+        Instance.lbAvvisaTallone.Content = $"{MainView.Dictionary["AvvisaTallone"]}";
+        Instance.opNomeUtente.Content = $"{MainView.Dictionary["NomeUtente"]}: ";
+        Instance.opNomeCpu.Content = $"{MainView.Dictionary["NomeCpu"]}: ";
+        Instance.lbmazzi.Content = $"{MainView.Dictionary["Mazzo"]}";
+        Instance.lbLivello.Content = $"{MainView.Dictionary["Livello"]}";
+        Instance.lbStessoSeme.Content = $"{MainView.Dictionary["VarianteStessoSeme"]}";
 
     }
     public void OnOk_Click(Object source, RoutedEventArgs evt)
@@ -98,6 +99,6 @@ public partial class OpzioniPage : UserControl
             HomePage.Instance.o.nomeMazzo=(string)i.Content;
         HomePage.Instance.o.livello = (UInt16) (cbLivello.SelectedIndex + 1);
         HomePage.GestisciOpzioni(out s);
-        MainView.MakeNotification($"{s}{MainWindow.Dictionary["RitornaallaHome"]}");
+        MainView.MakeNotification($"{s}{MainView.Dictionary["RitornaallaHome"]}");
     }
 }

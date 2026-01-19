@@ -1,7 +1,6 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-
 using CBriscola.ViewModels;
 using CBriscola.Views;
 using System;
@@ -16,6 +15,7 @@ public partial class App : Application
     private static string path;
     public static string Path { get => path; }
     public static string SistemaOperativo { get => sistemaOperativo; }
+    internal static bool PuoChiudersi { get; private set; }
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -25,6 +25,7 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
+            PuoChiudersi = true;
             if (OperatingSystem.IsWindows())
             {
                 path = "C:\\Program Files\\wxBriscola";
@@ -35,8 +36,8 @@ public partial class App : Application
                 StreamReader streamReader;
                 try
                 {
-                    streamReader = new StreamReader(File.OpenRead("/sys/devices/virtual/dmi/id/product_sku"), Encoding.UTF8, true, 128);
-                    sistemaOperativo = streamReader.ReadLine();
+                    streamReader = new StreamReader(File.OpenRead("/sys/devices/virtual/dmi/id/product_sku"), Encoding.ASCII, true, 128);
+                    sistemaOperativo = streamReader.ReadLine().ToString();
                     streamReader.Close();
                 }
                 catch (System.IO.DirectoryNotFoundException ex)
@@ -47,25 +48,23 @@ public partial class App : Application
                 {
                     sistemaOperativo = "SKU";
                 }
-                if (SistemaOperativo=="SKU")
-                	sistemaOperativo = "GNU/Linux";
+                if (SistemaOperativo == "SKU")
+                    sistemaOperativo = "GNU/Linux";
                 path = "/usr/share/wxBriscola";
             }
 
 
-            desktop.MainWindow = new MainWindow
-            {
-                DataContext = new MainViewModel()
-            };
+            desktop.MainWindow = new MainWindow();
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
-            singleViewPlatform.MainView = new MainView
-            {
-                DataContext = new MainViewModel()
-            };
+            path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            sistemaOperativo = Environment.OSVersion.ToString();
+            PuoChiudersi = false;
+            singleViewPlatform.MainView = new MainView();
         }
 
         base.OnFrameworkInitializationCompleted();
     }
+
 }

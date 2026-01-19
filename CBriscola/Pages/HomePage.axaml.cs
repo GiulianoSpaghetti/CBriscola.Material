@@ -5,6 +5,7 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Avalonia.Platform.Storage;
+using CBriscola.ViewModels;
 using CBriscola.Views;
 using Material.Styles.Controls;
 using Metsys.Bson;
@@ -12,6 +13,7 @@ using org.altervista.numerone.framework;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Compression;
 using System.Reflection;
 using System.Text.Json;
 
@@ -36,9 +38,10 @@ public partial class HomePage : UserControl
     private static org.altervista.numerone.framework.briscola.CartaHelper cartaHelper;
 
 
-    public static HomePage Instance;
+    internal static HomePage Instance { get; private set; }
     public HomePage()
     {
+        DataContext ??= MainViewModel.GetMainViewModelInstance();
         InitializeComponent();
         Instance = this;
         o = LeggiOpzioni();
@@ -53,19 +56,20 @@ public partial class HomePage : UserControl
 
     public static void Traduci()
     {
-        if (!Carta.Inizializza(App.Path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.Dictionary["bastoni"] as string, MainWindow.Dictionary["coppe"] as string, MainWindow.Dictionary["denari"] as string, MainWindow.Dictionary["spade"] as string, MainWindow.Dictionary["Fiori"] as string, MainWindow.Dictionary["Quadri"] as string, MainWindow.Dictionary["Cuori"] as string, MainWindow.Dictionary["Picche"] as string, "CBriscola"))
+        if (!Carta.Inizializza(App.Path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainView.Dictionary["bastoni"] as string, MainView.Dictionary["coppe"] as string, MainView.Dictionary["denari"] as string, MainView.Dictionary["spade"] as string, MainView.Dictionary["Fiori"] as string, MainView.Dictionary["Quadri"] as string, MainView.Dictionary["Cuori"] as string, MainView.Dictionary["Picche"] as string, "CBriscola"))
         {
             try
             {
-                MainView.MakeNotification($"{MainWindow.Dictionary["MazzoNonTrovatoTesto"]}");
+                MainView.MakeNotification($"{MainView.Dictionary["MazzoNonTrovatoTesto"]}");
             }
             catch (InvalidOperationException ex)
             {
                 m.SetNome("Napoletano");
-                Carta.Inizializza(App.Path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainWindow.Dictionary["bastoni"] as string, MainWindow.Dictionary["coppe"] as string, MainWindow.Dictionary["denari"] as string, MainWindow.Dictionary["spade"] as string, MainWindow.Dictionary["Fiori"] as string, MainWindow.Dictionary["Quadri"] as string, MainWindow.Dictionary["Cuori"] as string, MainWindow.Dictionary["Picche"] as string, "CBriscola");
+                Carta.Inizializza(App.Path, m, 40, cartaHelper = new org.altervista.numerone.framework.briscola.CartaHelper(ElaboratoreCarteBriscola.GetCartaBriscola()), MainView.Dictionary["bastoni"] as string, MainView.Dictionary["coppe"] as string, MainView.Dictionary["denari"] as string, MainView.Dictionary["spade"] as string, MainView.Dictionary["Fiori"] as string, MainView.Dictionary["Quadri"] as string, MainView.Dictionary["Cuori"] as string, MainView.Dictionary["Picche"] as string, "CBriscola");
             }
-     
+
         }
+
         if (Instance.o.nomeMazzo == "Napoletano")
         {
             Instance.asset = AssetLoader.Open(new Uri($"avares://CBriscola/Assets/retro_carte_pc.png"));
@@ -116,14 +120,14 @@ public partial class HomePage : UserControl
         Instance.Cpu2.Source = cartaCpu.Source;
         Instance.Briscola.Source = briscola.GetImmagine();
 
-        Instance.PuntiCpu.Content = $"{MainWindow.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainWindow.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
-        Instance.PuntiUtente.Content = $"{MainWindow.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainWindow.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
-        Instance.NelMazzoRimangono.Content = $"{MainWindow.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainWindow.Dictionary["carte"]}";
-        Instance.CartaBriscola.Content = $"{MainWindow.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
-        Instance.fpOk.Content = $"{MainWindow.Dictionary["Si"]}";
-        Instance.fpCancel.Content = $"{MainWindow.Dictionary["No"]}";
-        Instance.fpShare.Content = $"{MainWindow.Dictionary["Condividi"]}";
-        Instance.btnGiocata.Content = $"{MainWindow.Dictionary["giocataVista"]}";
+        Instance.PuntiCpu.Content = App.SistemaOperativo; //$"{MainView.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
+        Instance.PuntiUtente.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
+        Instance.NelMazzoRimangono.Content = $"{MainView.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainView.Dictionary["carte"]}";
+        Instance.CartaBriscola.Content = $"{MainView.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+        Instance.fpOk.Content = $"{MainView.Dictionary["Si"]}";
+        Instance.fpCancel.Content = $"{MainView.Dictionary["No"]}";
+        Instance.fpShare.Content = $"{MainView.Dictionary["Condividi"]}";
+        Instance.btnGiocata.Content = $"{MainView.Dictionary["giocataVista"]}";
 
     }
     private void Image_Tapped(object Sender, RoutedEventArgs arg)
@@ -138,7 +142,7 @@ public partial class HomePage : UserControl
         }
         catch (Exception ex)
         {
-            MainView.MakeNotification(MainWindow.Dictionary["MossaNonConsentitaTesto"] as string);
+            MainView.MakeNotification(MainView.Dictionary["MossaNonConsentitaTesto"] as string);
             return;
         }
         if (secondo == cpu)
@@ -159,13 +163,13 @@ public partial class HomePage : UserControl
 
         primo.AggiornaPunteggio(secondo);
 
-        PuntiCpu.Content = $"{MainWindow.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainWindow.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
-        PuntiUtente.Content = $"{MainWindow.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainWindow.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
+        PuntiCpu.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
+        PuntiUtente.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
         if (AggiungiCarte())
         {
 
-            NelMazzoRimangono.Content = $"{MainWindow.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainWindow.Dictionary["carte"]}";
-            CartaBriscola.Content = $"{MainWindow.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+            NelMazzoRimangono.Content = $"{MainView.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainView.Dictionary["carte"]}";
+            CartaBriscola.Content = $"{MainView.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
             if (Briscola.IsVisible)
             {
                 switch (m.GetNumeroCarte())
@@ -173,7 +177,7 @@ public partial class HomePage : UserControl
                     case 2:
                         if (avvisaTalloneFinito)
                         {
-                            MainView.MakeNotification($"{MainWindow.Dictionary["TalloneFinito"]}");
+                            MainView.MakeNotification($"{MainView.Dictionary["TalloneFinito"]}");
                         }
                         break;
                     case 0:
@@ -208,12 +212,12 @@ public partial class HomePage : UserControl
                 i1 = GiocaCpu();
                 if (cpu.GetCartaGiocata().StessoSeme(briscola))
                 {
-                    MainView.MakeNotification($"{MainWindow.Dictionary["LaCPUHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {MainWindow.Dictionary["di"]} {MainWindow.Dictionary["Briscola"]}");
+                    MainView.MakeNotification($"{MainView.Dictionary["LaCPUHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {MainView.Dictionary["di"]} {MainView.Dictionary["Briscola"]}");
 
                 }
                 else if (cpu.GetCartaGiocata().GetPunteggio() > 0)
                 {
-                    MainView.MakeNotification($"{MainWindow.Dictionary["LaCPUHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {MainWindow.Dictionary["di"]} {cpu.GetCartaGiocata().GetSemeStr()}");
+                    MainView.MakeNotification($"{MainView.Dictionary["LaCPUHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {MainView.Dictionary["di"]} {cpu.GetCartaGiocata().GetSemeStr()}");
                 }
             }
         }
@@ -223,24 +227,24 @@ public partial class HomePage : UserControl
             puntiUtente += g.GetPunteggio();
             puntiCpu += cpu.GetPunteggio();
             if (puntiUtente == puntiCpu)
-                s = $"{MainWindow.Dictionary["PartitaPatta"]}";
+                s = $"{MainView.Dictionary["PartitaPatta"]}";
             else
             {
                 if (puntiUtente > puntiCpu)
-                    s = $"{MainWindow.Dictionary["HaiVinto"]}";
+                    s = $"{MainView.Dictionary["HaiVinto"]}";
                 else
-                    s = $"{MainWindow.Dictionary["HaiPerso"]}";
-                s = $"{s} {MainWindow.Dictionary["per"]} {Math.Abs(puntiUtente - puntiCpu)} {MainWindow.Dictionary["punti"]}";
+                    s = $"{MainView.Dictionary["HaiPerso"]}";
+                s = $"{s} {MainView.Dictionary["per"]} {Math.Abs(puntiUtente - puntiCpu)} {MainView.Dictionary["punti"]}";
             }
             if (partite % 2 == 1)
             {
-                fpRisultrato.Content = $"{MainWindow.Dictionary["PartitaFinita"]}. {s}. {MainWindow.Dictionary["NuovaPartita"]}?";
+                fpRisultrato.Content = $"{MainView.Dictionary["PartitaFinita"]}. {s}. {MainView.Dictionary["NuovaPartita"]}?";
                 fpShare.IsVisible = true;
                 fpShare.IsEnabled = true;
             }
             else
             {
-                fpRisultrato.Content = $"{MainWindow.Dictionary["PartitaFinita"]}. {s}. {MainWindow.Dictionary["EffettuaSecondaPartita"]}?";
+                fpRisultrato.Content = $"{MainView.Dictionary["PartitaFinita"]}. {s}. {MainView.Dictionary["EffettuaSecondaPartita"]}?";
                 fpShare.IsVisible = false;
             }
             Applicazione.IsVisible = false;
@@ -261,7 +265,11 @@ public partial class HomePage : UserControl
     }
     private void OnCancelFp_Click(object sender, RoutedEventArgs e)
     {
-       MainWindow.Instance.Close();
+        if (App.PuoChiudersi)
+            MainWindow.Instance.Close();
+        else
+            fpRisultrato.Content = $"{MainView.Dictionary["ChiudiApp"]}";
+
     }
 
     private void OnFPShare_Click(object sender, RoutedEventArgs e)
@@ -272,7 +280,7 @@ public partial class HomePage : UserControl
 
         if (launcher == null)
             launcher = TopLevel.GetTopLevel(this).Launcher;
-        launcher.LaunchUriAsync(new Uri($"https://twitter.com/intent/tweet?text=Con%20la%20CBriscola.avalonia%20{s}la%20partita%20numero%20{partite}%20{g.GetNome()}%20contro%20{cpu.GetNome()}%20%C3%A8%20finita%20{puntiUtente}%20a%20{puntiCpu}%20col%20mazzo%20{m.GetNome()}%20su%20piattaforma%20{App.SistemaOperativo}&url=https%3A%2F%2Fgithub.com%2Fnumerunix%2Fcbriscola.Avalonia"));
+        launcher.LaunchUriAsync(new Uri($"https://twitter.com/intent/tweet?text=Con%20la%20CBriscola.avalonia%20{s}la%20partita%20numero%20{partite}%20{g.GetNome()}%20contro%20{cpu.GetNome()}%20%C3%A8%20finita%20{puntiUtente}%20a%20{puntiCpu}%20col%20mazzo%20{m.GetNome()}%20su%20piattaforma%20{App.SistemaOperativo}%26url=https%3A%2F%2Fopencode.net%2Fnumerone%2FCBriscola-Material"));
         fpShare.IsEnabled = false;
     }
     private Opzioni CaricaOpzioni()
@@ -284,14 +292,14 @@ public partial class HomePage : UserControl
     }
     private Opzioni LeggiOpzioni()
     {
-        Opzioni? o;
+        Opzioni o;
         if (!System.IO.Path.Exists(folder))
             Directory.CreateDirectory(folder);
         StreamReader file = null;
         try
         {
             file = new StreamReader(System.IO.Path.Combine(folder, "opzioni.json"));
-            try
+             try
             {
                 o = JsonSerializer.Deserialize<Opzioni>(file.ReadToEnd());
             }
@@ -312,6 +320,7 @@ public partial class HomePage : UserControl
             }
             if (o == null)
                 throw new FileNotFoundException();
+
         }
         catch (FileNotFoundException ex)
         {
@@ -370,7 +379,7 @@ public partial class HomePage : UserControl
         s = "";
         if (o.livello != helper.GetLivello())
         {
-            s += $"{MainWindow.Dictionary["PartitaRiavviata"]}\r\n";
+            s += $"{MainView.Dictionary["PartitaRiavviata"]}\r\n";
 
             puntiCpu = puntiUtente = 0;
             partite = 0;
@@ -379,11 +388,11 @@ public partial class HomePage : UserControl
         {
             if (vecchioStessoSeme)
             {
-                s += $"{MainWindow.Dictionary["VarianteBussataTesto"]}\r\n";
+                s += $"{MainView.Dictionary["VarianteBussataTesto"]}\r\n";
             }
             else
             {
-                s+=$"{MainWindow.Dictionary["VarianteNormaleTesto"]}\r\n";
+                s+=$"{MainView.Dictionary["VarianteNormaleTesto"]}\r\n";
 
             }
             puntiCpu = puntiUtente = 0;
@@ -426,11 +435,11 @@ public partial class HomePage : UserControl
         Cpu2.IsVisible = true;
         Giocata0.IsVisible = false;
         Giocata1.IsVisible = false;
-        PuntiCpu.Content = $"{MainWindow.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainWindow.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
-        PuntiUtente.Content = $"{MainWindow.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainWindow.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
-        NelMazzoRimangono.Content = $"{MainWindow.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainWindow.Dictionary["carte"]}";
+        PuntiCpu.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
+        PuntiUtente.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
+        NelMazzoRimangono.Content = $"{MainView.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainView.Dictionary["carte"]}";
         NelMazzoRimangono.IsVisible = true;
-        CartaBriscola.Content = $"{MainWindow.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+        CartaBriscola.Content = $"{MainView.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
         CartaBriscola.IsVisible = true;
         Briscola.Source = briscola.GetImmagine();
         Briscola.IsVisible = true;
@@ -497,10 +506,10 @@ public partial class HomePage : UserControl
         if (Instance.o.nomeMazzo != m.GetNome())
         { 
             m.SetNome(Instance.o.nomeMazzo);
-            if (!Carta.CaricaImmagini(App.Path, m, 40, MainWindow.Dictionary["bastoni"] as string, MainWindow.Dictionary["coppe"] as string, MainWindow.Dictionary["denari"] as string, MainWindow.Dictionary["spade"] as string, MainWindow.Dictionary["Fiori"] as string, MainWindow.Dictionary["Quadri"] as string, MainWindow.Dictionary["Cuori"] as string, MainWindow.Dictionary["Picche"] as string, "CBriscola")
+            if (!Carta.CaricaImmagini(App.Path, m, 40, MainView.Dictionary["bastoni"] as string, MainView.Dictionary["coppe"] as string, MainView.Dictionary["denari"] as string, MainView.Dictionary["spade"] as string, MainView.Dictionary["Fiori"] as string, MainView.Dictionary["Quadri"] as string, MainView.Dictionary["Cuori"] as string, MainView.Dictionary["Picche"] as string, "CBriscola")
 )
             {
-                s1=$"{MainWindow.Dictionary["MazzoNonTrovatoTesto"]}\r\n";
+                s1=$"{MainView.Dictionary["MazzoNonTrovatoTesto"]}\r\n";
                 Instance.o.nomeMazzo=m.GetNome();
  
             }
@@ -539,7 +548,7 @@ public partial class HomePage : UserControl
             Instance.Cpu0.Source = cartaCpu.Source;
             Instance.Cpu1.Source = cartaCpu.Source;
             Instance.Cpu2.Source = cartaCpu.Source;
-            Instance.CartaBriscola.Content = $"{MainWindow.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+            Instance.CartaBriscola.Content = $"{MainView.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
         }
         Instance.SalvaOpzioni(Instance.o);
         if (Instance.o.livello != helper.GetLivello() || stessoSeme != Instance.o.stessoSeme)
@@ -548,5 +557,4 @@ public partial class HomePage : UserControl
         }
         s = s1 + s;
     }
-
 }
