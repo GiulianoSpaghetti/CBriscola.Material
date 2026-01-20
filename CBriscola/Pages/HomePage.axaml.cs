@@ -120,7 +120,7 @@ public partial class HomePage : UserControl
         Instance.Cpu2.Source = cartaCpu.Source;
         Instance.Briscola.Source = briscola.GetImmagine();
 
-        Instance.PuntiCpu.Content = App.SistemaOperativo; //$"{MainView.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
+        Instance.PuntiCpu.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {cpu.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
         Instance.PuntiUtente.Content = $"{MainView.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
         Instance.NelMazzoRimangono.Content = $"{MainView.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainView.Dictionary["carte"]}";
         Instance.CartaBriscola.Content = $"{MainView.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";

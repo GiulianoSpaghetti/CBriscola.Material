@@ -29,7 +29,7 @@ namespace cbriscola.avalonia_setup
             project.GUID = new Guid("68B61DE0-07A0-499E-B3FB-F15873641EB4");
             project.Version = new Version("2.0");
             project.Platform = Platform.arm64;
-            project.SourceBaseDir = "E:\\10\\CBriscola\\CBriscola.Desktop\\bin\\Release\\net10.0-windows10.0.26100.0";
+            project.SourceBaseDir = "E:\\CBriscola-Material\\CBriscola.Desktop\\bin\\Release\\net10.0-windows10.0.26100.0";
             project.LicenceFile = "LICENSE.rtf";
             project.OutDir = "C:\\Users\\numer\\Downloads";
             project.ControlPanelInfo.Manufacturer = "Giulio Sorrentino";
