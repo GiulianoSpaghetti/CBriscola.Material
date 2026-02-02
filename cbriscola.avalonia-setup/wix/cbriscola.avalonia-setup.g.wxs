@@ -210,19 +210,19 @@
         </Component>
 
         <Directory Id="runtimes" Name="runtimes">
-          <Directory Id="win2darm64_" Name="win-arm64">
+          <Directory Id="win2dx64_" Name="win-x64">
             <Directory Id="native" Name="native">
 
-              <Component Id="Component.av_libglesv2.dll_1215271553" Guid="68b61de0-07a0-499e-b3fb-f158e0fe4812" Bitness="always64">
-                <File Id="av_libglesv2.dll_1215271553" Source="runtimes\win-arm64\native\av_libglesv2.dll" />
+              <Component Id="Component.av_libglesv2.dll_1791258303" Guid="68b61de0-07a0-499e-b3fb-f15853df9b4b" Bitness="always64">
+                <File Id="av_libglesv2.dll_1791258303" Source="runtimes\win-x64\native\av_libglesv2.dll" />
               </Component>
 
-              <Component Id="Component.libHarfBuzzSharp.dll_3856743102" Guid="68b61de0-07a0-499e-b3fb-f1585f099bea" Bitness="always64">
-                <File Id="libHarfBuzzSharp.dll_3856743102" Source="runtimes\win-arm64\native\libHarfBuzzSharp.dll" />
+              <Component Id="Component.libHarfBuzzSharp.dll_1561235758" Guid="68b61de0-07a0-499e-b3fb-f158a2c34aa5" Bitness="always64">
+                <File Id="libHarfBuzzSharp.dll_1561235758" Source="runtimes\win-x64\native\libHarfBuzzSharp.dll" />
               </Component>
 
-              <Component Id="Component.libSkiaSharp.dll_663145871" Guid="68b61de0-07a0-499e-b3fb-f15801c79f6d" Bitness="always64">
-                <File Id="libSkiaSharp.dll_663145871" Source="runtimes\win-arm64\native\libSkiaSharp.dll" />
+              <Component Id="Component.libSkiaSharp.dll_3753603893" Guid="68b61de0-07a0-499e-b3fb-f158b4a9340a" Bitness="always64">
+                <File Id="libSkiaSharp.dll_3753603893" Source="runtimes\win-x64\native\libSkiaSharp.dll" />
               </Component>
 
             </Directory>
@@ -246,7 +246,7 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <WixVariable Id="WixUILicenseRtf" Value="E:\CBriscola-Material\CBriscola.Desktop\bin\Release\net10.0-windows10.0.26100.0\LICENSE.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="E:\10\CBriscola\CBriscola.Desktop\bin\Release\net10.0-windows10.0.26100.0\LICENSE.rtf" />
 
     <UIRef Id="WixUI_ErrorProgressText" />
 
@@ -302,9 +302,9 @@
       <ComponentRef Id="Component.System.Reactive.dll_3227492702" />
       <ComponentRef Id="Component.Tmds.DBus.Protocol.dll_3651087285" />
       <ComponentRef Id="Component.WinRT.Runtime.dll_2702495410" />
-      <ComponentRef Id="Component.av_libglesv2.dll_1215271553" />
-      <ComponentRef Id="Component.libHarfBuzzSharp.dll_3856743102" />
-      <ComponentRef Id="Component.libSkiaSharp.dll_663145871" />
+      <ComponentRef Id="Component.av_libglesv2.dll_1791258303" />
+      <ComponentRef Id="Component.libHarfBuzzSharp.dll_1561235758" />
+      <ComponentRef Id="Component.libSkiaSharp.dll_3753603893" />
       <ComponentRef Id="Component.CBriscola.Avalonia__" />
     </Feature>
   </Package>

@@ -65,6 +65,8 @@
 			<x:String x:Key="MossaNonConsentitaTesto">Devi rispondere al seme</x:String>
 			<x:String x:Key="RitornaallaHome">Ritorna a CBriscola Material per vedere le modifiche</x:String>
 			<x:String x:Key="ChiudiApp">Allora abbiamo finito. Puoi chiudere.</x:String>
+			<x:String x:Key="Autore">Giulio Sorrentino</x:String>
+            <x:String x:Key="Revisore">>&#160;</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="en">
 			<x:String x:Key="PuntiDiPrefisso">&#160;</x:String>
@@ -120,6 +122,8 @@
 			<x:String x:Key="MossaNonConsentitaTesto">You have to respond to the suit</x:String>
 			<x:String x:Key="RitornaallaHome">Return to CBriscola Material to see the changes</x:String>
 			<x:String x:Key="ChiudiApp">You can close the app</x:String>
+			<x:String x:Key="Autore">Google Translator</x:String>
+			<x:String x:Key="Revisore">Giulio Sorrentino</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="de">
 			<x:String x:Key="PuntiDiPrefisso">&#160;</x:String>
@@ -175,52 +179,54 @@
 			<x:String x:Key="MossaNonConsentitaTesto">Sie müssen auf den Anzung reagieren</x:String>
 			<x:String x:Key="RitornaallaHome">Kehren Sie zum CBriscola-Material zurück, um die Änderungen anzuzeigen</x:String>
 			<x:String x:Key="ChiudiApp">Sie können die App schließen</x:String>
+			<x:String x:Key="Autore">Google Translator</x:String>
+			<x:String x:Key="Revisore">>&#160;</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="fr">
 			<x:String x:Key="PuntiDiPrefisso">Points de</x:String>
 			<x:String x:Key="PuntiDiSuffisso">&#160;</x:String>
-			<x:String x:Key="NelMazzoRimangono">Il y a</x:String>
-			<x:String x:Key="carte">cartes restantes dans le jeu</x:String>
+			<x:String x:Key="NelMazzoRimangono">Il reste</x:String>
+			<x:String x:Key="carte">cartes dans le cartes</x:String>
 			<x:String x:Key="IlSemeDiBriscolaE">La costume d'atout est</x:String>
 			<x:String x:Key="BriscolaDaPunti">La carte désignant l'atout peut avoir un poids</x:String>
 			<x:String x:Key="AvvisaTallone">Alerte lorsque le jeu se termine</x:String>
 			<x:String x:Key="NomeUtente">Nom d'utilisateur</x:String>
-			<x:String x:Key="NomeCpu">CNom du processeur</x:String>
+			<x:String x:Key="NomeCpu">Nom du processeur</x:String>
 			<x:String x:Key="giocataVista">J'ai vu les pièces</x:String>
 			<x:String x:Key="Applicazione">CBriscola Material</x:String>
-			<x:String x:Key="Informazioni">Informations</x:String>
+			<x:String x:Key="Informazioni">Reisegnements</x:String>
 			<x:String x:Key="Opzioni">Choix</x:String>
 			<x:String x:Key="PartitaPatta">Le jeu est noyé</x:String>
-			<x:String x:Key="HaiVinto">Vous gagnez</x:String>
-			<x:String x:Key="HaiPerso">Vous perdez</x:String>
-			<x:String x:Key="per">far</x:String>
+			<x:String x:Key="HaiVinto">Tu as gagné</x:String>
+			<x:String x:Key="HaiPerso">Tu as perdu</x:String>
+			<x:String x:Key="per">selon</x:String>
 			<x:String x:Key="punti">points</x:String>
-			<x:String x:Key="PartitaFinita">Game over</x:String>
-			<x:String x:Key="NuovaPartita">Voulez-vous rejouer</x:String>
-			<x:String x:Key="Mazzo">Plateau</x:String>
+			<x:String x:Key="PartitaFinita">Le match est termin</x:String>
+			<x:String x:Key="NuovaPartita">Voulez-vous commencer un nouveau jeu</x:String>
+			<x:String x:Key="Mazzo">Cartes</x:String>
 			<x:String x:Key="Si">Oui</x:String>
-			<x:String x:Key="No">Non</x:String>
-			<x:String x:Key="Condividi">Partager</x:String>
+			<x:String x:Key="No">No</x:String>
+			<x:String x:Key="Condividi">Condivides</x:String>
 			<x:String x:Key="bastoni">Batons</x:String>
 			<x:String x:Key="coppe">Tasses</x:String>
-			<x:String x:Key="denari">Deniers</x:String>
+			<x:String x:Key="denari">Argents</x:String>
 			<x:String x:Key="spade">épées</x:String>
-			<x:String x:Key="TalloneFinito">Le plateau est terminé</x:String>
+			<x:String x:Key="TalloneFinito">Les cartes sont terminées</x:String>
 			<x:String x:Key="LaCPUHaGiocatoIl">Le CPU a joué le</x:String>
-			<x:String x:Key="Briscola">atouts</x:String>
+			<x:String x:Key="Briscola">atout</x:String>
 			<x:String x:Key="di">de</x:String>
-			<x:String x:Key="Cuori">Cœur</x:String>
-			<x:String x:Key="Quadri">Carreau</x:String>
-			<x:String x:Key="Fiori">Trèfle</x:String>
-			<x:String x:Key="Picche">Pique</x:String>
-			<x:String x:Key="TalloneFinitoIntestazione">Plateau terminé</x:String>
+			<x:String x:Key="Cuori">Cœurs</x:String>
+			<x:String x:Key="Quadri">Carreaux</x:String>
+			<x:String x:Key="Fiori">Fleurs</x:String>
+			<x:String x:Key="Picche">Piques</x:String>
+			<x:String x:Key="TalloneFinitoIntestazione">Les cartes sont terminées</x:String>
 			<x:String x:Key="GiocataCarta">Carte avec poids jouée</x:String>
 			<x:String x:Key="Livello">niveau processeur</x:String>
-			<x:String x:Key="LivelloCambiato">Le niveau a changé</x:String>
-			<x:String x:Key="PartitaRiavviata">Un nouveau jeu va commencer</x:String>
-			<x:String x:Key="EffettuaSecondaPartita">est-ce qu'il joue un deuxième jeu</x:String>
-			<x:String x:Key="MazzoNonTrovatoTitolo">Impossible de trouver un deck personnalisé</x:String>
-			<x:String x:Key="MazzoNonTrovatoTesto">Le deck personnalisé est introuvable, il a probablement été supprimé. Le jeu napolitain sera chargé.</x:String>
+			<x:String x:Key="LivelloCambiato">>Le niveau a changé</x:String>
+			<x:String x:Key="PartitaRiavviata">Une nouvelle partie commenceé</x:String>
+			<x:String x:Key="EffettuaSecondaPartita">Veux-tu jouer un deuxième partie</x:String>
+			<x:String x:Key="MazzoNonTrovatoTitolo">Impossible de trouver les cartes personnalisé</x:String>
+			<x:String x:Key="MazzoNonTrovatoTesto">Les cartes personnalisé est introuvable, il a probablement été supprimé. Le jeu napolitain sera chargé.</x:String>
 			<x:String x:Key="VarianteStessoSeme">Variante dans laquelle vous devez répondre à la costume</x:String>
 			<x:String x:Key="VarianteBussataTitolo">Vous avez choisi de jouer la variante knock</x:String>
 			<x:String x:Key="VarianteBussataTesto">Vous avez choisi de jouer à la variante knock, le jeu va redémarrer</x:String>
@@ -229,7 +235,9 @@
 			<x:String x:Key="MossaNonConsentitaTitolo">Déplacement interdit</x:String>
 			<x:String x:Key="MossaNonConsentitaTesto">Vous devez répondre à la costume</x:String>
 			<x:String x:Key="RitornaallaHome">Revenez au CBriscola Material pour voir les changements</x:String>
-			<x:String x:Key="ChiudiApp">Vous pouvez fermer l'application</x:String>
+			<x:String x:Key="ChiudiApp">Sorte</x:String>
+			<x:String x:Key="Autore">Google Translator</x:String>
+			<x:String x:Key="Revisore">&#160;</x:String>
 		</ResourceDictionary>
 		<ResourceDictionary x:Key="es">
 			<x:String x:Key="PuntiDiPrefisso">Puntos de</x:String>
@@ -285,6 +293,8 @@
 			<x:String x:Key="MossaNonConsentitaTesto">Tienes que responder a la traje.</x:String>
 			<x:String x:Key="RitornaallaHome">Regrese a CBriscola Material para ver los cambios.</x:String>
 			<x:String x:Key="ChiudiApp">Puedes cerrar la aplicación.</x:String>
+			<x:String x:Key="Autore">Google Translator</x:String>
+			<x:String x:Key="Revisore">&#160;</x:String>
 		</ResourceDictionary>
 	</UserControl.Resources>
 	<dialogHostAvalonia:DialogHost Identifier="MainDialogHost">

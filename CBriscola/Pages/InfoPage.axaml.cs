@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using CBriscola.ViewModels;
+using CBriscola.Views;
 using System;
 using System.Diagnostics;
 
@@ -16,7 +17,10 @@ public partial class InfoPage : UserControl
     {
         DataContext ??= MainViewModel.GetMainViewModelInstance();
         InitializeComponent();
-        
+        TranslatorCredit.Content = $"Translator: {MainView.Dictionary["Autore"]}";
+        if (MainView.Dictionary["Traduttore"].ToString().Trim()!="")
+            TranslatorCredit.Content += $"Revisor: {MainView.Dictionary["Traduttore"]}";
+
     }
     private void OnSito_Click(object sender, RoutedEventArgs e)
     {

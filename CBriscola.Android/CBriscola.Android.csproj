@@ -7,7 +7,7 @@
 		<ApplicationId>com.CompanyName.CBriscola</ApplicationId>
 		<ApplicationVersion>1</ApplicationVersion>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<AndroidPackageFormat>apk</AndroidPackageFormat>
+		<AndroidPackageFormat>aab</AndroidPackageFormat>
 		<AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
 	</PropertyGroup>
 
