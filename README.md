@@ -7,6 +7,9 @@ Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato fu
 
 È il primo software in Google material ad avere gli accenti su android senza essere polarizzabile.
 
+<img width="1080" height="2400" alt="Screenshot_1776623276" src="https://github.com/user-attachments/assets/d7724435-c191-452a-92b5-18eabccad4c4" />
+
+
 ![Napoli-Logo](https://github.com/user-attachments/assets/8163c808-62d3-40d3-bce3-0957e57bc26a)
 ![made in parco grifeo](https://github.com/user-attachments/assets/fadbf046-aeae-4f11-bda4-eb332c701d56)
 
