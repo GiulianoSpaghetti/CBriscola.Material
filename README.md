@@ -149,6 +149,12 @@ E' semplicissimo.
 <img width="1920" alt="2025-01-25 (7)" src="https://github.com/user-attachments/assets/00424793-b22d-43ac-8955-c68ae501c862" />
 <img width="1920" alt="2025-01-25 (6)" src="https://github.com/user-attachments/assets/f4b77c31-b324-4e59-b310-1c68854d36aa" />
 
+## Il caso degli acccenti
+
+Ho aperto i resource dictionary su debian con libreoffice, ho sistemato gli accenti, ed ho salvato in txt ottenendo un file unicode puro.
+A questi punto sono andato su windows ed ho visto che con visual studio i resource dictionary vengono autmaticamente convertiti in ascii(rt).
+Quindi, una volta ottenuto il file in unicode puro, bisogna ricompilare con la linea di comando, il file txt che si ottiene da libreoffice è quasi universale.
+
 ## Video di presentazione
 
 https://www.youtube.com/watch?v=wraMolVGKB0&t=6s
