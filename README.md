@@ -34,25 +34,29 @@ Questo è il motto registrato per questa briscola.
 
 ## Android
 
-C'è una beta pubblica.
+Per dotnet 10 c'è il prodotto quasi completo, a cui mancano solo i DLC, che con l'attuale avalonia non si possono avere.
+A tal proposito, vi voglio segnalare [il mio video](https://www.youtube.com/watch?v=NpTP7cg3xpE) per capire prché al momento non c'è modo di avere i DLC su android con dotnet.
+
+[![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/apps/org.altervista.numerone.cbriscolamaui)
+
+
+C'è una beta pubblica, in dotnet 11.
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/apps/testing/org.altervista.numerone.cbriscolamaui)
 
-Chi ha comprato la prima cbriscola maui (anche coi voucher che ho distribuito) non dovrà pagare nulla, ma finché non si trova il modo di sistemare gli accenti il prodotto non può diventare completo.
-Per quanto riguarda i mazzi aggiuntivi, al momento non c'è modo di installarli, se non facendo modifiche illegali ai telefoni per cui vi sconsiglio di farlo.
-A tal proposito, vi voglio segnalare [il mio video](https://www.youtube.com/watch?v=NpTP7cg3xpE) per capire prché al momento non c'è modo di avere i DLC su android con dotnet.
 
 Bug noti della versione per android:
 
 I mazzi aggiuntivi non possono essere installati
 
-Gli accenti vengono visualizzati "a la ascii"
-
 Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del telefono e l'IA si è arrabbiata. IL sistema funziona e bisogna solo aspettare che le IA del telefono si calmino.
 
-[Trailer della beta privata](https://youtu.be/oja1eVcYynQ?si=twNNwyQsZn1oOP8o)
 
-## Windows e Unix
+## windows
+
+[![winget](https://user-images.githubusercontent.com/49786146/159123331-729ae9f2-4cf9-439b-8515-16a4ef991089.png)](https://marticliment.com/unigetui/share?name=CBriscola.Avalonia&id=GiulioSorrentino.cbriscola.avalonia&sourceName=winget&managerName=WinGet)
+
+## Unix
 
 [![pling](http://numeronesoft.ddns.net:8080/images/pling.png)](https://www.pling.com/p/2296516/)
 
