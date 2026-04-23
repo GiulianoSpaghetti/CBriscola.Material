@@ -37,7 +37,7 @@ Questo è il motto registrato per questa briscola.
 Per dotnet 10 c'è il prodotto quasi completo, a cui mancano solo i DLC, che con l'attuale avalonia non si possono avere.
 A tal proposito, vi voglio segnalare [il mio video](https://www.youtube.com/watch?v=NpTP7cg3xpE) per capire prché al momento non c'è modo di avere i DLC su android con dotnet.
 
-[![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/apps/org.altervista.numerone.cbriscolamaui)
+[![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.cbriscolamaui)
 
 
 C'è una beta pubblica, in dotnet 11.
