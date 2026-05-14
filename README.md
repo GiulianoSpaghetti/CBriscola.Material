@@ -40,8 +40,6 @@ A tal proposito, vi voglio segnalare [il mio video](https://www.youtube.com/watc
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.cbriscolamaui)
 
 
-C'è una beta pubblica, in dotnet 11.
-
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/apps/testing/org.altervista.numerone.cbriscolamaui)
 
 
@@ -54,7 +52,7 @@ Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del tel
 
 ## windows
 
-[![winget](https://user-images.githubusercontent.com/49786146/159123331-729ae9f2-4cf9-439b-8515-16a4ef991089.png)](https://marticliment.com/unigetui/share?name=CBriscola.Avalonia&id=GiulioSorrentino.cbriscola.avalonia&sourceName=winget&managerName=WinGet)
+[![winget](unigetui://giuliosorrentino.CBriscola.Avalonia)
 
 ## Unix
 
