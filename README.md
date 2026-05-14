@@ -52,7 +52,7 @@ Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del tel
 
 ## windows
 
-[![winget](https://user-images.githubusercontent.com/49786146/159123331-729ae9f2-4cf9-439b-8515-16a4ef991089.png)](unigetui://giuliosorrentino.CBriscola.Avalonia)
+    unigetui://giuliosorrentino.CBriscola.Avalonia
 
 ## Unix
 
