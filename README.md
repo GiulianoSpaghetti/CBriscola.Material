@@ -53,7 +53,7 @@ Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del tel
 ## windows
 (da copiare in esegui)
 
-    unigetui://giuliosorrentino.cbriscola.avalonia
+    unigetui://giuliosorrentino&#46cbriscola&#46avalonia
 
 ## Unix
 
