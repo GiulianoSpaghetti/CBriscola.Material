@@ -63,7 +63,9 @@ Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del tel
 
 #### Windows
 
-https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.10
+    unigetui://DesktopRuntime
+    
+installare il windows desktopruntime 10
 
 #### Unix
 
