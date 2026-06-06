@@ -23,9 +23,10 @@ public partial class MainView : UserControl
         MainView.Traduci();
         HomePage.Traduci();
         OpzioniPage.Traduci();
+        InfoPage.Traduci();
     }
     public void DrawerSelectionChanged(object? sender, RoutedEventArgs? args)
-    {
+    { 
         if (sender is not ListBox listBox)
             return;
 

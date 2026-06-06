@@ -63,7 +63,6 @@ public partial class App : Application
             PuoChiudersi = false;
             singleViewPlatform.MainView = new MainView();
         }
-
         base.OnFrameworkInitializationCompleted();
     }
 

@@ -8,18 +8,19 @@ using CBriscola.ViewModels;
 using CBriscola.Views;
 using Material.Styles.Controls;
 using Metsys.Bson;
+using org.altervista.numerone.framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
+using System.Text.Json;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace CBriscola.Pages;
 
 public partial class OpzioniPage : UserControl
 {
-
     internal static OpzioniPage Instance { get; private set; }
     private readonly string dirs = System.IO.Path.Combine(App.Path, "Mazzi");
     public OpzioniPage()
@@ -28,15 +29,15 @@ public partial class OpzioniPage : UserControl
         InitializeComponent();
         Instance = this;
         lsmazzi.Items.Clear();
-        txtNomeUtente.Text = HomePage.Instance.o.NomeUtente;
-        txtCpu.Text = HomePage.Instance.o.NomeCpu;
-        tsCartaBriscola.IsChecked = HomePage.Instance.o.briscolaDaPunti;
-        tsAvvisaTallone.IsChecked = HomePage.Instance.o.avvisaTalloneFinito;
-        tsStessoSeme.IsChecked = HomePage.Instance.o.stessoSeme;
-        cbLivello.SelectedIndex = HomePage.Instance.o.livello - 1;
+        txtNomeUtente.Text = ((MainViewModel)DataContext).NomeUtente;
+        txtCpu.Text = ((MainViewModel)DataContext).NomeCpu;
+        tsCartaBriscola.IsChecked = ((MainViewModel)DataContext).BriscolaDaPunti;
+        tsAvvisaTallone.IsChecked = ((MainViewModel)DataContext).AvvisaTalloneFinito;
+        tsStessoSeme.IsChecked = ((MainViewModel)DataContext).StessoSeme;
+        cbLivello.SelectedIndex = ((MainViewModel)DataContext).Livello - 1;
         List<ListBoxItem> mazzi;
         List<String> path;
-        cbLivello.SelectedIndex = HomePage.Instance.o.livello - 1;
+        cbLivello.SelectedIndex = ((MainViewModel)DataContext).Livello - 1;
         ListBoxItem item;
         String s1 = "";
 
@@ -67,38 +68,39 @@ public partial class OpzioniPage : UserControl
 
     public static void Traduci()
     {
-        Instance.lbCartaBriscola.Content = $"{MainView.Dictionary["BriscolaDaPunti"]}";
-        Instance.lbAvvisaTallone.Content = $"{MainView.Dictionary["AvvisaTallone"]}";
-        Instance.opNomeUtente.Content = $"{MainView.Dictionary["NomeUtente"]}: ";
-        Instance.opNomeCpu.Content = $"{MainView.Dictionary["NomeCpu"]}: ";
-        Instance.lbmazzi.Content = $"{MainView.Dictionary["Mazzo"]}";
-        Instance.lbLivello.Content = $"{MainView.Dictionary["Livello"]}";
-        Instance.lbStessoSeme.Content = $"{MainView.Dictionary["VarianteStessoSeme"]}";
+        Instance.lbCartaBriscola.Text = $"{MainView.Dictionary["BriscolaDaPunti"]}";
+        Instance.lbAvvisaTallone.Text = $"{MainView.Dictionary["AvvisaTallone"]}";
+        Instance.opNomeUtente.Text = $"{MainView.Dictionary["NomeUtente"]}: ";
+        Instance.opNomeCpu.Text = $"{MainView.Dictionary["NomeCpu"]}: ";
+        Instance.lbmazzi.Text = $"{MainView.Dictionary["Mazzo"]}";
+        Instance.lbLivello.Text = $"{MainView.Dictionary["Livello"]}";
+        Instance.lbStessoSeme.Text = $"{MainView.Dictionary["VarianteStessoSeme"]}";
 
     }
     public void OnOk_Click(Object source, RoutedEventArgs evt)
     {
         String s;
-        HomePage.Instance.o.NomeUtente = txtNomeUtente.Text;
-        HomePage.Instance.o.NomeCpu = txtCpu.Text;
+        ((MainViewModel)DataContext).NomeUtente = txtNomeUtente.Text;
+        ((MainViewModel)DataContext).NomeCpu = txtCpu.Text;
 
         if (tsCartaBriscola.IsChecked == true)
-            HomePage.Instance.o.briscolaDaPunti = true;
+            ((MainViewModel)DataContext).BriscolaDaPunti = true;
         else
-            HomePage.Instance.o.briscolaDaPunti = false;
+            ((MainViewModel)DataContext).BriscolaDaPunti = false;
         if (tsAvvisaTallone.IsChecked == true)
-            HomePage.Instance.o.avvisaTalloneFinito = true;
+            ((MainViewModel)DataContext).AvvisaTalloneFinito = true;
         else
-            HomePage.Instance.o.avvisaTalloneFinito = false;
+            ((MainViewModel)DataContext).AvvisaTalloneFinito = false;
         if (tsStessoSeme.IsChecked == true)
-            HomePage.Instance.o.stessoSeme = true;
+            ((MainViewModel)DataContext).StessoSeme = true;
         else
-            HomePage.Instance.o.stessoSeme = false;
+            ((MainViewModel)DataContext).StessoSeme = false;
         ListBoxItem i = (ListBoxItem)lsmazzi.SelectedItem;
         if (i != null)
-            HomePage.Instance.o.nomeMazzo=(string)i.Content;
-        HomePage.Instance.o.livello = (UInt16) (cbLivello.SelectedIndex + 1);
+            ((MainViewModel)DataContext).NomeMazzo =(string)i.Content;
+        ((MainViewModel)DataContext).Livello = (UInt16) (cbLivello.SelectedIndex + 1);
         HomePage.GestisciOpzioni(out s);
         MainView.MakeNotification($"{s}{MainView.Dictionary["RitornaallaHome"]}");
     }
+
 }

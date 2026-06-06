@@ -11,22 +11,26 @@ namespace CBriscola.Pages;
 
 public partial class InfoPage : UserControl
 {
+    internal static InfoPage Instance { get; private set; } = null;
     private static Avalonia.Platform.Storage.ILauncher? launcher=null;
     public static readonly Uri HomePage=new Uri("https://www.opencode.net/numerone/CBriscola-Material");
     public InfoPage()
     {
         DataContext ??= MainViewModel.GetMainViewModelInstance();
         InitializeComponent();
-        TranslatorCredit.Content = $"Translator: {MainView.Dictionary["Autore"]}";
-        if (MainView.Dictionary["Traduttore"].ToString().Trim()!="")
-            TranslatorCredit.Content += $"Revisor: {MainView.Dictionary["Traduttore"]}";
+        Instance = this;
+    }
 
+    public static void Traduci()
+    {
+        Instance.TranslatorCredit.Text = $"Translator: {MainView.Dictionary["Autore"]}";
+        if (MainView.Dictionary["Revisore"].ToString().Trim() != "")
+            Instance.RevisorCredit.Text = $"Revisor: {MainView.Dictionary["Revisore"]}";
     }
     private void OnSito_Click(object sender, RoutedEventArgs e)
     {
         if (launcher==null)
             launcher = TopLevel.GetTopLevel( (Avalonia.Visual) sender).Launcher;
-
         launcher.LaunchUriAsync(HomePage);
     }
 }
