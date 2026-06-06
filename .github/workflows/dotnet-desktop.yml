@@ -1,0 +1,45 @@
+name: .NET AVALONIA Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    env:
+      Solution_Name: cbriscola.slnx
+      Configuration: ${{ matrix.configuration }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Restore packages
+      run: dotnet restore cbriscola.slnx -r win-x64
+
+    - name: Build AValonia App
+      run: |
+        dotnet build cbriscola.Desktop/cbriscola.Desktop.csproj -c $env:Configuration -r win-x64
+      shell: pwsh
+
+    - name: Upload Avalonia App
+      uses: actions/upload-artifact@v4
+      with:
+        name: App
+        path: cbriscola.Desktop/bin/Release/net10.0-windows10.0.26100.0
+        include-hidden-files: true
+        if-no-files-found: error
