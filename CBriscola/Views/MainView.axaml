@@ -325,8 +325,8 @@
 						<Carousel.Styles>
 							<Style Selector="Carousel#PageCarousel:not(.no-transitions)">
 								<Setter Property="PageTransition">
-									<PageSlide Duration="1" SlideOutEasing="QuinticEaseOut"
-											   SlideInEasing="QuinticEaseIn" />
+								<PageSlide Duration="1.00" Orientation="Vertical" SlideOutEasing="QuarticEaseOut"
+											   SlideInEasing="QuarticEaseIn" />
 								</Setter>
 							</Style>
 						</Carousel.Styles>
