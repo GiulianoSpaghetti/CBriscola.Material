@@ -13,7 +13,7 @@ public partial class InfoPage : UserControl
 {
     internal static InfoPage Instance { get; private set; } = null;
     private static Avalonia.Platform.Storage.ILauncher? launcher=null;
-    public static readonly Uri HomePage=new Uri("https://www.opencode.net/numerone/CBriscola-Material");
+    public static readonly Uri HomePage=new Uri("https://github.com/GiulianoSpaghetti/CBriscola.Material");
     public InfoPage()
     {
         DataContext ??= MainViewModel.GetMainViewModelInstance();
