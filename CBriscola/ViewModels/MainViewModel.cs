@@ -127,12 +127,14 @@ public class MainViewModel : ViewModelBase
         {
             path = new List<string>();
         }
+        for (UInt16 i = 0; i < path.Count; i++)
+            path[i] = path[i].Substring(path[i].LastIndexOf(System.IO.Path.DirectorySeparatorChar) + 1);
         if (!path.Contains("Napoletano"))
             path.Add("Napoletano");
         path.Sort();
         foreach (String s in path)
         {
-            Mazzi.Add(new MyCarta(r.Next(0, 39), s.Substring(s.LastIndexOf(System.IO.Path.DirectorySeparatorChar) + 1), dirs));
+            Mazzi.Add(new MyCarta(r.Next(0, 39), s, dirs));
         }
     }
 }
