@@ -11,18 +11,18 @@
     <PackageVersion Include="Avalonia.Fonts.Inter" Version="12.1.0" />
     <PackageVersion Include="Avalonia.Desktop" Version="12.1.0" />
     <PackageVersion Include="CardFramework.avalonia" Version="1.5.9" />
-    <PackageVersion Include="DialogHost.Avalonia" Version="0.12.2" />
-    <PackageVersion Include="HarfBuzzSharp" Version="14.2.1" />
-    <PackageVersion Include="HarfBuzzSharp.NativeAssets.Linux" Version="14.2.1" />
-    <PackageVersion Include="HarfBuzzSharp.NativeAssets.WebAssembly" Version="14.2.1" />
+    <PackageVersion Include="DialogHost.Avalonia" Version="0.12.3" />
+    <PackageVersion Include="HarfBuzzSharp" Version="14.2.1.1" />
+    <PackageVersion Include="HarfBuzzSharp.NativeAssets.Linux" Version="14.2.1.1" />
+    <PackageVersion Include="HarfBuzzSharp.NativeAssets.WebAssembly" Version="14.2.1.1" />
     <PackageVersion Include="HarfBuzzSharp.NativeAssets.Win32" Version="14.2.1" />
     <PackageVersion Include="Material.Avalonia" Version="3.17.0" />
-    <PackageVersion Include="ReactiveUI.Avalonia" Version="12.0.3" />
-    <PackageVersion Include="SkiaSharp" Version="4.150.0" />
-    <PackageVersion Include="SkiaSharp.NativeAssets.Linux" Version="4.150.0" />
-    <PackageVersion Include="SkiaSharp.NativeAssets.WebAssembly" Version="4.150.0" />
+    <PackageVersion Include="ReactiveUI.Avalonia" Version="12.1.0" />
+    <PackageVersion Include="SkiaSharp" Version="4.150.1" />
+    <PackageVersion Include="SkiaSharp.NativeAssets.Linux" Version="4.150.1" />
+    <PackageVersion Include="SkiaSharp.NativeAssets.WebAssembly" Version="4.150.1" />
     <PackageVersion Include="SkiaSharp.NativeAssets.Win32" Version="4.150.0" />
-    <PackageVersion Include="Splat" Version="19.4.1" />
+    <PackageVersion Include="Splat" Version="20.2.0" />
     <PackageVersion Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.2" />
     <PackageVersion Include="WixSharp_wix4" Version="2.13.0" />
     <PackageVersion Include="WixToolset.Dtf.WindowsInstaller" Version="7.0.0" />
