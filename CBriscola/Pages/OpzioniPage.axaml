@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
  			 xmlns:pages="clr-namespace:CBriscola.Pages"
-			 x:DataType="pages:HomePage"
-             x:Class="CBriscola.Pages.OpzioniPage">
+             x:Class="CBriscola.Pages.OpzioniPage"
+			 x:CompileBindings="False">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition />
@@ -40,7 +40,16 @@
 			<ComboBoxItem>3</ComboBoxItem>
 		</ComboBox>
 		<TextBlock TextWrapping="Wrap" x:Name="lbmazzi" Grid.Row="7" Grid.Column="0" />
-		<ListBox x:Name="lsmazzi" Grid.Row="7" Grid.Column="1" />
+		<ListBox x:Name="lsmazzi" Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Mazzi}" SelectedItem="{Binding SelectedCarta, Mode=TwoWay}" Height="200">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" Spacing="10">
+						<Image x:Name="img" Source="{Binding Img.Source}" Width="20" Height="20" />
+						<TextBlock Text="{Binding Nome}" />
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
 		<Button Click="OnOk_Click"  Grid.Row="8" Grid.Column="1">OK</Button>
 	</Grid>
 

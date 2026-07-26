@@ -1,10 +1,16 @@
 ﻿using Avalonia.Controls;
+using Avalonia.Controls.Shapes;
+using CBriscola.ViewModels;
 using org.altervista.numerone.framework;
+using ReactiveUI;
 using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
-using ReactiveUI;
 
 namespace CBriscola.ViewModels;
 
@@ -19,6 +25,14 @@ public class MainViewModel : ViewModelBase
     private bool _briscolaDaPunti;
     private bool _avvisaTalloneFinito;
     private ushort _livello;
+    private MyCarta _selectedCarta;
+    public MyCarta SelectedCarta
+    {
+        get => _selectedCarta;
+        set => this.RaiseAndSetIfChanged(ref _selectedCarta, value);
+    }
+    private Random r = new Random();
+
     private bool _stessoSeme;
     public String NomeUtente { get => _nomeUtente; set { o.NomeUtente = value; this.RaiseAndSetIfChanged(ref _nomeUtente, value); } }
     public String NomeCpu { get => _nomeCpu; set { o.NomeCpu = value; this.RaiseAndSetIfChanged(ref _nomeCpu, value); } }
@@ -28,12 +42,12 @@ public class MainViewModel : ViewModelBase
 
     public ushort Livello { get => _livello; set { o.livello = value; this.RaiseAndSetIfChanged(ref _livello, value); } }
     public bool StessoSeme { get => _stessoSeme; set { o.stessoSeme = value; this.RaiseAndSetIfChanged(ref _stessoSeme, value); } }
-
+    public ObservableCollection<MyCarta> Mazzi { get; } = new ObservableCollection<MyCarta>();
     public MainViewModel()
     {
         o = new Opzioni();
         LeggiOpzioni();
-    }
+   }
 
     public static MainViewModel GetMainViewModelInstance()
     {
@@ -101,5 +115,24 @@ public class MainViewModel : ViewModelBase
         StreamWriter w = new StreamWriter($"{System.IO.Path.Combine(folder, "opzioni.json")}");
         w.Write(JsonSerializer.Serialize(o));
         w.Close();
+    }
+
+    public void CaricaMazzi(String dirs) {
+        List<String> path;
+        try
+        {
+            path = Directory.EnumerateDirectories(dirs).ToList();
+        }
+        catch (System.IO.DirectoryNotFoundException ex)
+        {
+            path = new List<string>();
+        }
+        if (!path.Contains("Napoletano"))
+            path.Add("Napoletano");
+        path.Sort();
+        foreach (String s in path)
+        {
+            Mazzi.Add(new MyCarta(r.Next(0, 39), s.Substring(s.LastIndexOf(System.IO.Path.DirectorySeparatorChar) + 1), dirs));
+        }
     }
 }

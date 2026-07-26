@@ -28,42 +28,14 @@ public partial class OpzioniPage : UserControl
         DataContext ??= MainViewModel.GetMainViewModelInstance();
         InitializeComponent();
         Instance = this;
-        lsmazzi.Items.Clear();
         txtNomeUtente.Text = ((MainViewModel)DataContext).NomeUtente;
         txtCpu.Text = ((MainViewModel)DataContext).NomeCpu;
         tsCartaBriscola.IsChecked = ((MainViewModel)DataContext).BriscolaDaPunti;
         tsAvvisaTallone.IsChecked = ((MainViewModel)DataContext).AvvisaTalloneFinito;
         tsStessoSeme.IsChecked = ((MainViewModel)DataContext).StessoSeme;
         cbLivello.SelectedIndex = ((MainViewModel)DataContext).Livello - 1;
-        List<ListBoxItem> mazzi;
-        List<String> path;
         cbLivello.SelectedIndex = ((MainViewModel)DataContext).Livello - 1;
-        ListBoxItem item;
-        String s1 = "";
-
-        try
-        {
-            path = new List<String>(Directory.EnumerateDirectories(dirs));
-        }
-        catch (System.IO.DirectoryNotFoundException ex)
-        {
-            path = new List<string>();
-        }
-        for (UInt16 i = 0; i < path.Count; i++)
-        {
-            path[i] = path[i].Substring(path[i].LastIndexOf(System.IO.Path.DirectorySeparatorChar) + 1);
-
-        }
-        if (!path.Contains("Napoletano"))
-            path.Add("Napoletano");
-        path.Sort();
-        foreach (String s in path)
-        {
-            item = new ListBoxItem();
-            item.Content = s;
-            lsmazzi.Items.Add(item);
-
-        }
+        ((MainViewModel)DataContext).CaricaMazzi(dirs);
     }
 
     public static void Traduci()
@@ -95,9 +67,9 @@ public partial class OpzioniPage : UserControl
             ((MainViewModel)DataContext).StessoSeme = true;
         else
             ((MainViewModel)DataContext).StessoSeme = false;
-        ListBoxItem i = (ListBoxItem)lsmazzi.SelectedItem;
-        if (i != null)
-            ((MainViewModel)DataContext).NomeMazzo =(string)i.Content;
+        MyCarta c = ((MainViewModel)DataContext).SelectedCarta;
+        if (c != null)
+            ((MainViewModel)DataContext).NomeMazzo = c.Nome;
         ((MainViewModel)DataContext).Livello = (UInt16) (cbLivello.SelectedIndex + 1);
         HomePage.GestisciOpzioni(out s);
         MainView.MakeNotification($"{s}{MainView.Dictionary["RitornaallaHome"]}");
