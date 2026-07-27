@@ -123,6 +123,8 @@ In questa versione non è possibile vedere più di due avvisi nella notifica, a 
 
 Se si usa un mazzo non completo all'avvio del programma, verrà caricato il mazzo napoletano e l'avviso non è garantito che esca.
 
+L'anteprima funziona solo se le cartelle dei mazzi sono completi, perché genera un numero random e prende l'immagine corrispondente. Se non c'è l'immagine il programma crasha, la mancanza dell'immagine non è gestita appositamente perché ritenuto inutile: i mazzi devono essere completi per definizione.
+
 ## Le Property in avalonia
 
 Per chi non lo sapesse, le property in avalonia dovrebbero essere scrivibili una sola volta e sempre leggibili, solo che avalonia è in c# e le property in c# sono r/w.
