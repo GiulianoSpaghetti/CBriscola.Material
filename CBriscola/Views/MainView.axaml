@@ -169,7 +169,6 @@
 			<x:String x:Key="PartitaRiavviata">Ein neues Spiel beginnt</x:String>
 			<x:String x:Key="EffettuaSecondaPartita">Spielt er ein zweites Spiel</x:String>
 			<x:String x:Key="MazzoNonTrovatoTitolo">Benutzerdefiniertes Deck kann nicht gefunden werden</x:String>
-				<x:String x:Key="MazzoNonTrovatoTitolo">Benutzerdefiniertes Deck kann nicht gefunden werden</x:String>
 			<x:String x:Key="MazzoNonTrovatoTesto">Das benutzerdefinierte Deck konnte nicht gefunden werden, es wurde wahrscheinlich gelöscht. Das neapolitanische Deck wird geladen.</x:String>
 			<x:String x:Key="VarianteStessoSeme">Variante, bei der Sie die Klage beantworten müssen</x:String>
 			<x:String x:Key="VarianteBussataTitolo">Sie haben sich für die Klopfvariante entschtoggler buttonieden</x:String>
