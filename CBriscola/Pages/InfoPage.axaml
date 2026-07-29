@@ -7,7 +7,7 @@
 			 x:DataType="pages:HomePage"
              x:Class="CBriscola.Pages.InfoPage">
 	<StackPanel>
-		<TextBlock TextWrapping="Wrap">CBriscola versione 2.3</TextBlock>
+		<TextBlock TextWrapping="Wrap">CBriscola versione 2.4</TextBlock>
 		<TextBlock TextWrapping="Wrap">ⓒ Giulio Sorrentino 2023-2026</TextBlock>
 		<TextBlock TextWrapping="Wrap">License: GPL v3 or, in your humble opinion, any later version</TextBlock>
 		<TextBlock TextWrapping="Wrap">This trump wins because it scores more points not because it deals the cards, therefore also taking the 8s, 9s and 10s</TextBlock>
