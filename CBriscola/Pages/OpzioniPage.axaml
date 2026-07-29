@@ -19,7 +19,7 @@
 			<RowDefinition />
 			<RowDefinition />
 			<RowDefinition />
-			<RowDefinition Height="300"/>
+			<RowDefinition Height="Auto"/>
 			<RowDefinition />
 			<RowDefinition />
 		</Grid.RowDefinitions>
@@ -40,7 +40,7 @@
 			<ComboBoxItem>3</ComboBoxItem>
 		</ComboBox>
 		<TextBlock TextWrapping="Wrap" x:Name="lbmazzi" Grid.Row="7" Grid.Column="0" />
-		<ListBox x:Name="lsmazzi" Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Mazzi}" SelectedItem="{Binding SelectedCarta, Mode=TwoWay}" Height="200">
+		<ListBox x:Name="lsmazzi" Grid.Row="7" Grid.Column="1" ItemsSource="{Binding Mazzi}" SelectedItem="{Binding SelectedCarta, Mode=TwoWay}" MaxHeight="120">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal" Spacing="10">
