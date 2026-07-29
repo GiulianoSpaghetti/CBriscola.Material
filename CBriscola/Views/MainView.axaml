@@ -1,4 +1,4 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
+<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -169,6 +169,7 @@
 			<x:String x:Key="PartitaRiavviata">Ein neues Spiel beginnt</x:String>
 			<x:String x:Key="EffettuaSecondaPartita">Spielt er ein zweites Spiel</x:String>
 			<x:String x:Key="MazzoNonTrovatoTitolo">Benutzerdefiniertes Deck kann nicht gefunden werden</x:String>
+				<x:String x:Key="MazzoNonTrovatoTitolo">Benutzerdefiniertes Deck kann nicht gefunden werden</x:String>
 			<x:String x:Key="MazzoNonTrovatoTesto">Das benutzerdefinierte Deck konnte nicht gefunden werden, es wurde wahrscheinlich gelöscht. Das neapolitanische Deck wird geladen.</x:String>
 			<x:String x:Key="VarianteStessoSeme">Variante, bei der Sie die Klage beantworten müssen</x:String>
 			<x:String x:Key="VarianteBussataTitolo">Sie haben sich für die Klopfvariante entschtoggler buttonieden</x:String>
@@ -201,7 +202,7 @@
 			<x:String x:Key="HaiPerso">Tu as perdu</x:String>
 			<x:String x:Key="per">selon</x:String>
 			<x:String x:Key="punti">points</x:String>
-			<x:String x:Key="PartitaFinita">Le match est terminée.</x:String>
+			<x:String x:Key="PartitaFinita">Le match est termin</x:String>
 			<x:String x:Key="NuovaPartita">Voulez-vous commencer un nouveau jeu</x:String>
 			<x:String x:Key="Mazzo">Cartes</x:String>
 			<x:String x:Key="Si">Oui</x:String>
@@ -212,14 +213,14 @@
 			<x:String x:Key="denari">Argents</x:String>
 			<x:String x:Key="spade">épées</x:String>
 			<x:String x:Key="TalloneFinito">Les cartes sont terminées</x:String>			
-                  	<x:String x:Key="LaCPUHaGiocatoIl">Le CPU a joué le</x:String>
+                  <x:String x:Key="LaCPUHaGiocatoIl">Le CPU a joué le</x:String>
 			<x:String x:Key="Briscola">atout</x:String>
 			<x:String x:Key="di">de</x:String>
 			<x:String x:Key="Cuori">cœurs</x:String>
 			<x:String x:Key="Quadri">Carreaux</x:String>
 			<x:String x:Key="Fiori">Fleurs</x:String>
 			<x:String x:Key="Picche">Piques</x:String>
-			<x:String x:Key="TalloneFinitoIntestazione">Les cartes sont terminées</x:String>
+	<x:String x:Key="TalloneFinitoIntestazione">Les cartes sont terminées</x:String>
 			<x:String x:Key="GiocataCarta">Carte avec poids jouée</x:String>
 			<x:String x:Key="Livello">niveau processeur</x:String>
 			<x:String x:Key="LivelloCambiato">>Le niveau a changé</x:String>
@@ -319,21 +320,32 @@
 					</ScrollViewer>
 				</controls:NavigationDrawer.LeftDrawerContent>
 				<DockPanel LastChildFill="true">
-					<ToggleButton Name="NavDrawerSwitch" Padding="4" Content="Menu" />
-					<Carousel Name="PageCarousel"
-		  HorizontalAlignment="Stretch">
-						<Carousel.Styles>
-							<Style Selector="Carousel#PageCarousel:not(.no-transitions)">
-								<Setter Property="PageTransition">
-									<CrossFade Duration="0:00:00.500" />
-								</Setter>
-							</Style>
-						</Carousel.Styles>
-						<pages:HomePage />
-						<pages:OpzioniPage />
-						<pages:InfoPage />
-					</Carousel>
-				</DockPanel>
+    <!-- Pulsante Menu agganciato in alto -->
+    <ToggleButton Name="NavDrawerSwitch" DockPanel.Dock="Top" Padding="4" Content="Menu" />
+
+    <!-- Il Carousel ora si estende in verticale e si collega alla ListBox -->
+    <Carousel Name="PageCarousel" 
+              HorizontalAlignment="Stretch" 
+              VerticalAlignment="Stretch"
+              SelectedIndex="{Binding ElementName=DrawerList, Path=SelectedIndex}">
+        
+        <Carousel.PageTransition>
+            <PageSlide Duration="00:00:00.300" Orientation="Horizontal"/>
+        </Carousel.PageTransition>
+
+        <Carousel.Styles>
+            <Style Selector="Carousel.no-transitions">
+                <Setter Property="PageTransition" Value="{x:Null}" />
+            </Style>
+        </Carousel.Styles>
+
+        <!-- Le tue pagine statiche -->
+        <pages:HomePage />
+        <pages:OpzioniPage />
+        <pages:InfoPage />
+    </Carousel>
+</DockPanel>
+
 			</controls:NavigationDrawer>
 		</controls:SnackbarHost>
 
