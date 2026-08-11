@@ -324,7 +324,7 @@ public partial class HomePage : UserControl
     private void NuovaPartita(bool vecchioStessoSeme, out String s)
     {
         s = "";
-        if (((MainViewModel) DataContext).Livello == helper.GetLivello())
+        if (((MainViewModel) DataContext).Livello != helper.GetLivello())
         {
             s += $"{MainView.Dictionary["PartitaRiavviata"]}\r\n";
 
