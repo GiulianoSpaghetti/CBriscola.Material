@@ -26,7 +26,7 @@ public partial class HomePage : UserControl
     private static Carta c, c1, briscola;
     private static Image cartaCpu = new Image();
     private static Image i, i1;
-    private static UInt16 puntiUtente = 0, puntiCpu = 0;
+    private static UInt16 puntiUtente = 0, puntiCpu = 0, vecchiPuntiUtente=0, vecchiPuntiCpu=0;
     private static UInt128 partite = 0;
     private static bool avvisaTalloneFinito = true, briscolaDaPunti = false, primaUtente = true, stessoSeme = false;
     private static GiocatoreHelperCpu helper;
@@ -225,26 +225,31 @@ public partial class HomePage : UserControl
             String s = "";
             puntiUtente += g.GetPunteggio();
             puntiCpu += cpu.GetPunteggio();
-            if (puntiUtente == puntiCpu)
+            if (vecchiPuntiUtente+ puntiUtente == vecchiPuntiCpu+puntiCpu)
                 s = $"{MainView.Dictionary["PartitaPatta"]}";
             else
             {
-                if (puntiUtente > puntiCpu)
+                if (vecchiPuntiUtente + puntiUtente > vecchiPuntiCpu + puntiCpu)
                     s = $"{MainView.Dictionary["HaiVinto"]}";
                 else
                     s = $"{MainView.Dictionary["HaiPerso"]}";
-                s = $"{s} {MainView.Dictionary["per"]} {Math.Abs(puntiUtente - puntiCpu)} {MainView.Dictionary["punti"]}";
+                s = $"{s} {MainView.Dictionary["per"]} {Math.Abs(vecchiPuntiUtente +puntiUtente - vecchiPuntiCpu - puntiCpu)} {MainView.Dictionary["punti"]}";
             }
             if (partite % 2 == 1)
             {
                 fpRisultrato.Text = $"{MainView.Dictionary["PartitaFinita"]}. {s}. {MainView.Dictionary["NuovaPartita"]}?";
                 fpShare.IsVisible = true;
                 fpShare.IsEnabled = true;
+                vecchiPuntiCpu = 0;
+                vecchiPuntiUtente = 0;
             }
             else
             {
                 fpRisultrato.Text = $"{MainView.Dictionary["PartitaFinita"]}. {s}. {MainView.Dictionary["EffettuaSecondaPartita"]}?";
                 fpShare.IsVisible = false;
+                vecchiPuntiCpu = puntiCpu;
+                vecchiPuntiUtente = puntiUtente;
+
             }
             Applicazione.IsVisible = false;
             FinePartita.IsVisible = true;
