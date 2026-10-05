@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 	xmlns:materialIcons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
  			 xmlns:pages="clr-namespace:CBriscola.Pages"
 			 x:DataType="pages:HomePage"
@@ -14,7 +15,7 @@
 		<TextBlock TextWrapping="Wrap" Name="TranslatorCredit" />
         <TextBlock TextWrapping="Wrap" Name="RevisorCredit" />
 		<TextBlock TextWrapping="Wrap">The cards are property of modiano, c# is property of Microsoft Corporation, Avalonia is a registered trademark and Material is property of Google LCC</TextBlock>
-		<Button Click="OnSito_Click" Grid.Row="5">More Informations</Button>
+		<Button Click="OnSito_Click" Grid.Row="5" Content="{materialIcons:MaterialIconTextExt, Kind=WebBox}"/>
 	</StackPanel>
 
 </UserControl>

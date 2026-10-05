@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 xmlns:pages="clr-namespace:CBriscola.Pages"
+			 xmlns:materialIcons="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
 			 x:DataType="pages:HomePage"
              x:Class="CBriscola.Pages.HomePage">
 	<Grid>
@@ -43,7 +44,7 @@
 	<TextBlock TextWrapping="Wrap" x:Name="NelMazzoRimangono" Grid.Row="2" Grid.Column="4">Nel Mazzo Rimangono</TextBlock>
 	<TextBlock TextWrapping="Wrap" x:Name="CartaBriscola" Grid.Row="3" Grid.Column="4">Il seme di briscola è</TextBlock>
 	<Image x:Name="Briscola" Grid.Row="4" Grid.Column="4" />
-	<Button x:Name="btnGiocata" Grid.Row="5" Grid.Column="2" IsVisible="false" Click="Gioca_Click" />
+	<Button x:Name="btnGiocata" Grid.Row="5" Grid.Column="2" IsVisible="false" Click="Gioca_Click" Content="{materialIcons:MaterialIconTextExt, Kind=Play}"/>
 	</Grid>
 	<Grid x:Name="FinePartita" IsVisible="False">
 		<Grid.RowDefinitions>
@@ -56,9 +57,9 @@
 			<ColumnDefinition />
 		</Grid.ColumnDefinitions>
 		<TextBlock TextWrapping="Wrap" x:Name="fpRisultrato" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
-		<Button x:Name="fpOk" Click="OnOkFp_Click" Grid.Row="1" Grid.Column="0">Ok</Button>
-		<Button x:Name="fpCancel" Click="OnCancelFp_Click" Grid.Row="1" Grid.Column="1">Annulla</Button>
-		<Button x:Name="fpShare" Click="OnFPShare_Click" Grid.Row="1" Grid.Column="2">Condividi</Button>
+		<Button x:Name="fpOk" Click="OnOkFp_Click" Grid.Row="1" Grid.Column="0" Content="{materialIcons:MaterialIconTextExt, Kind=Check}"/>
+		<Button x:Name="fpCancel" Click="OnCancelFp_Click" Grid.Row="1" Grid.Column="1" Content="{materialIcons:MaterialIconTextExt, Kind=Close}"/>
+		<Button x:Name="fpShare" Click="OnFPShare_Click" Grid.Row="1" Grid.Column="2" Content="{materialIcons:MaterialIconTextExt, Kind=Share}"/>
 	</Grid>
 	</Grid>
 

@@ -123,11 +123,6 @@ public partial class HomePage : UserControl
         Instance.PuntiUtente.Text = $"{MainView.Dictionary["PuntiDiPrefisso"]} {g.GetNome()} {MainView.Dictionary["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
         Instance.NelMazzoRimangono.Text = $"{MainView.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {MainView.Dictionary["carte"]}";
         Instance.CartaBriscola.Text = $"{MainView.Dictionary["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
-        Instance.fpOk.Content = $"{MainView.Dictionary["Si"]}";
-        Instance.fpCancel.Content = $"{MainView.Dictionary["No"]}";
-        Instance.fpShare.Content = $"{MainView.Dictionary["Condividi"]}";
-        Instance.btnGiocata.Content = $"{MainView.Dictionary["giocataVista"]}";
-
     }
     private void Image_Tapped(object Sender, RoutedEventArgs arg)
     {
