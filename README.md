@@ -40,6 +40,7 @@ Per dotnet 10 c'è il prodotto completo, e ricompilandolo con le opzioni di debu
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.cbriscolamaui)
 
+Qui invece trovate la versione in dotnet 11 rc1
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/apps/testing/org.altervista.numerone.cbriscolamaui)
 
