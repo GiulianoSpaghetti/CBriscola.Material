@@ -4,8 +4,10 @@
 
 Questo gioco si basa sul framework per giochi di carte equi che include un algorimo brevettato che funziona su tutti i giochi di carte senza piatto ed è il migliore teorico, ma la teoria dei giochi è falsa, perché UNO (per dirne uno) è un gioco di carte di logica, non di matematica, e basta un esempio per smentire una credenza, mentre per far diventare la credenza teoria serve dimostrarla per tutti i casi.
 
+È finalmente pronta per schermi piccoli (foto sulla pagina di google play).
 
 È il primo software in Google material ad avere gli accenti su android senza essere polarizzabile.
+
 
 <img width="1080" height="2400" alt="Screenshot_1776623276" src="https://github.com/user-attachments/assets/d7724435-c191-452a-92b5-18eabccad4c4" />
 
