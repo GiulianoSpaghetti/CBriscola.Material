@@ -47,10 +47,7 @@ Qui invece trovate la versione in dotnet 11 rc1
 
 Bug noti della versione per android:
 
-I mazzi aggiuntivi non possono essere installati
-
-Le pagine non si aprono sempre, perché l'app cercava i mazzi nella root del telefono e l'IA si è arrabbiata. IL sistema funziona e bisogna solo aspettare che le IA del telefono si calmino.
-
+Per avere i DLC bisogna ricompilare.
 
 ## windows
 (da copiare in esegui)
