@@ -4,7 +4,6 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -17,12 +16,16 @@
     <PackageReference Include="Avalonia" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
     <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="AvaloniaUI.DiagnosticsSupport" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Include="CardFramework.avalonia" />
     <PackageReference Include="DialogHost.Avalonia" />
     <PackageReference Include="Material.Avalonia" />
     <PackageReference Include="Material.Icons" />
     <PackageReference Include="Material.Icons.Avalonia" />
+    <PackageReference Include="MicroCom.Runtime" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
     <PackageReference Include="ReactiveUI.Avalonia" />
     <PackageReference Include="Splat" />
   </ItemGroup>
