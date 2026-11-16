@@ -341,7 +341,7 @@ public partial class HomePage : UserControl
             partite = 0;
             stessoSeme = ((MainViewModel) DataContext).StessoSeme;
         }
-        if (partite % 2 == 0)
+        if (partite % 2 == 1)
             puntiUtente = puntiCpu = 0;
         e = new ElaboratoreCarteBriscola(((MainViewModel) DataContext).BriscolaDaPunti);
         m = new Mazzo(e);
