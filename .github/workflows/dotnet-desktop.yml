@@ -22,7 +22,7 @@ jobs:
     - uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '10.0.x'
-    - run: dotnet build cbriscola.Desktop/cbriscola.Desktop.csproj -c $env:Configuration -r win-x64 -p:UseMonoRuntime=false
+    - run: dotnet build cbriscola.Desktop/cbriscola.Desktop.csproj -c $env:Configuration -r win-arm64 -p:UseMonoRuntime=false
       shell: pwsh
 
     - name: Upload Avalonia App
